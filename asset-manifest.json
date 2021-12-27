@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/metis-project/static/css/main.6b8e03ec.css",
+    "main.js": "/metis-project/static/js/main.7fcdd4a7.js",
+    "static/js/787.325f9e7c.chunk.js": "/metis-project/static/js/787.325f9e7c.chunk.js",
+    "index.html": "/metis-project/index.html",
+    "main.6b8e03ec.css.map": "/metis-project/static/css/main.6b8e03ec.css.map",
+    "main.7fcdd4a7.js.map": "/metis-project/static/js/main.7fcdd4a7.js.map",
+    "787.325f9e7c.chunk.js.map": "/metis-project/static/js/787.325f9e7c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6b8e03ec.css",
+    "static/js/main.7fcdd4a7.js"
+  ]
+}
