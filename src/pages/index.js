@@ -1,5 +1,7 @@
 import React from "react";
 import Hero from "../components/Hero";
+import Roadmap from "../components/Roadmap";
+import Partners from "./partners";
 
 
 const Home = () => {
@@ -21,8 +23,13 @@ const Home = () => {
             <button className="bg-indigo-800 hover:bg-indigo-400 transition duration-300 ease-in-out py-3 px-5 text-white rounded-md mt-4">Join our Community</button>
         </div>
         
-        
+      <div className="flex flex-col justify-center items-center lg:w-2/4 w-4/5 pt-8">
+      <h1 className="lg:text-4xl text-xl italic uppercase font-black ">Backed by</h1>
+        <p className="text-base leading-8 pt-8">Our Partners</p>
       </div>
+      
+      </div>
+      <Partners className="flex-row"/>
     </section>
   
     </>

@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from "react";
-import { BrowserRouter,Routes, Route,HashRouter } from "react-router-dom";
+import { Routes, Route,HashRouter } from "react-router-dom";
 import  Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import Home from './pages/index';
@@ -8,6 +8,7 @@ import Dropdown from './components/Dropdown';
 import About from './pages/about';
 import Wallet from './pages/wallet';
 import Collection from './pages/collection';
+import Partners from './pages/partners';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,6 +54,10 @@ function App() {
          <Route
            path="/collection"
           element={<Collection/>}
+         />
+         <Route
+           path="/partners"
+          element={<Partners/>}
          />
       </Routes>
       <Footer />

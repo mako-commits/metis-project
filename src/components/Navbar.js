@@ -41,6 +41,9 @@ const Navbar = ({ toggle }) => {
         <Link to="/collection" className="p-4">
           View Collection
         </Link>
+        <Link to="/partners" className="p-4">
+          Partners
+        </Link>
       </div>
      
     </nav>
