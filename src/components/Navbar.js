@@ -5,11 +5,12 @@ import { Link } from "react-router-dom";
 const Navbar = ({ toggle }) => {
   return (
     <nav
-      className="flex justify-between items-center h-16 bg-black text-white relative shadow-sm font-mono"
+      className="flex justify-between items-center h-16 text-black text-sm font-medium relative shadow-sm"
       role="navigation"
     >
       <Link to="/" className="pl-8">
-        <h1>Metis</h1>
+        <h1>Metis Hack</h1>
+
       </Link>
       <div className="px-4 cursor-pointer md:hidden" onClick={toggle}>
         <svg

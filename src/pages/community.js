@@ -1,12 +1,12 @@
 import React from "react";
 
 
-const Collection = () => {
+const Community = () => {
   return (
     <>
-    <section className="bg-orange-300">
+    <section className="bg-lime-300">
     <div className="container h-screen mx-auto flex justify-center items-center ">
-        <h1 className="text-9xl uppercase font-black">Collection Page</h1>
+        <h1 className="text-9xl uppercase font-black">Community Page</h1>
       </div>
     </section>
  
@@ -14,4 +14,4 @@ const Collection = () => {
   );
 };
 
-export default Collection;
+export default Community;
