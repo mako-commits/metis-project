@@ -30,6 +30,7 @@ const Home = () => {
       
       </div>
       <Partners className="flex-row"/>
+      <Roadmap />
     </section>
   
     </>
