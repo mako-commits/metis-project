@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from "react";
-import { BrowserRouter,Routes, Route } from "react-router-dom";
+import { BrowserRouter,Routes, Route,HashRouter } from "react-router-dom";
 import  Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import Home from './pages/index';
@@ -34,7 +34,7 @@ function App() {
 
     <>
     
-    <BrowserRouter>
+    <HashRouter>
     <Navbar toggle={toggle} />
     <Dropdown isOpen={isOpen} toggle={toggle} /> 
       <Routes>
@@ -56,7 +56,7 @@ function App() {
          />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
 
     </>
   );
