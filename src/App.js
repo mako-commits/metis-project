@@ -39,7 +39,7 @@ function App() {
     <Dropdown isOpen={isOpen} toggle={toggle} /> 
       <Routes>
         <Route
-           path="/"
+           path="/home"
           element={<Home/>}
          />
          <Route
