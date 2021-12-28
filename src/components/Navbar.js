@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 const Navbar = ({ toggle }) => {
   return (
     <nav
@@ -9,8 +8,7 @@ const Navbar = ({ toggle }) => {
       role="navigation"
     >
       <Link to="/" className="pl-8">
-        <h1>Metis Hack</h1>
-
+        <h1 className="text-3xl font-semibold italic">Titan Wing</h1>
       </Link>
       <div className="px-4 cursor-pointer md:hidden" onClick={toggle}>
         <svg
@@ -29,9 +27,6 @@ const Navbar = ({ toggle }) => {
         </svg>
       </div>
       <div className="pr-8 md:block  hidden">
-        {/* <Link to="/" className="p-4">
-          Home
-        </Link> */}
         <Link to="/about" className="p-4">
           About
         </Link>
@@ -45,7 +40,6 @@ const Navbar = ({ toggle }) => {
           Partners
         </Link>
       </div>
-     
     </nav>
   );
 };
