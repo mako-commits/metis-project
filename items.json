@@ -5,7 +5,7 @@
     "price": 54,
     "status": "Available",
     "rarity": "Very rare",
-    "img": "/suitBull.jpeg"
+    "img": "./suitBull.jpeg"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "price": 52,
     "status": "Unavailable",
     "rarity": "Slighty rare",
-    "img": "/redBull.jpeg"
+    "img": "./redBull.jpeg"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "price": 90,
     "status": "Unavailable",
     "rarity": "Slighty rare",
-    "img": "/graduateBull.jpeg"
+    "img": "./graduateBull.jpeg"
   },
   {
     "id": 2,
@@ -29,7 +29,7 @@
     "price": 40,
     "status": "Unavailable",
     "rarity": "Slighty rare",
-    "img": "/cowboyBull.jpeg"
+    "img": "./cowboyBull.jpeg"
   },
   {
     "id": 2,
@@ -37,7 +37,7 @@
     "price": 53,
     "status": "Available",
     "rarity": "Very rare",
-    "img": "/birthdayBull.jpeg"
+    "img": "./birthdayBull.jpeg"
   },
   {
     "id": 2,
@@ -45,6 +45,6 @@
     "price": 50,
     "status": "Unavailable",
     "rarity": "Just rare",
-    "img": "/boredBull.jpeg"
+    "img": "./boredBull.jpeg"
   }
 ]
