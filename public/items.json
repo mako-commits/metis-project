@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "item_name": "Suit bull",
+    "price": 54,
+    "status": "Available",
+    "rarity": "Very rare",
+    "img": "/suitBull.jpeg"
+  },
+  {
+    "id": 2,
+    "item_name": "Red Bull",
+    "price": 52,
+    "status": "Unavailable",
+    "rarity": "Slighty rare",
+    "img": "/redBull.jpeg"
+  },
+  {
+    "id": 3,
+    "item_name": "Graduate Bull",
+    "price": 90,
+    "status": "Unavailable",
+    "rarity": "Slighty rare",
+    "img": "/graduateBull.jpeg"
+  },
+  {
+    "id": 2,
+    "item_name": "Cowboy Bull",
+    "price": 40,
+    "status": "Unavailable",
+    "rarity": "Slighty rare",
+    "img": "/cowboyBull.jpeg"
+  },
+  {
+    "id": 2,
+    "item_name": "Birthday Bull",
+    "price": 53,
+    "status": "Available",
+    "rarity": "Very rare",
+    "img": "/birthdayBull.jpeg"
+  },
+  {
+    "id": 2,
+    "item_name": "Bored bull",
+    "price": 50,
+    "status": "Unavailable",
+    "rarity": "Just rare",
+    "img": "/boredBull.jpeg"
+  }
+]
