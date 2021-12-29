@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { metadata } from '../constants/metadata'
-import ArtCard from "../components/ArtCard/ArtCard";
+import React, { useEffect, useState } from "react";
+import Collection from "../components/Collection";
+import axios from "axios";
+// import items from '../components/items.json'
 
 const Collections = () => {
-<<<<<<< HEAD
   const [allCollections, setAllCollections] = useState([]);
   const [filteredCollections, setFilteredCollections] = useState([]);
   const [filters, setFilters] = useState({ s: "", sort: "" });
@@ -34,37 +34,21 @@ const Collections = () => {
         const sign = Math.abs(diff) / diff;
         return filters.sort === "price" ? sign : -sign;
       });
-=======
-  
-  const metaLength = metadata.length
-  const [currentIndex, setCurrentindex] = useState(11)
-
-  const add = () => {
-    if(currentIndex < metaLength){
-      setCurrentindex(currentIndex+11)
-    }else if(currentIndex === metaLength){
-      setCurrentindex(11)
->>>>>>> 68031dcd9d72cd389cb2970b3bc38ea7cb356580
     }
-  } 
 
+    setFilteredCollections(collections);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filters]);
   return (
-    <div className="grid place-items-center my-10">
-      <div className = "container m-auto flex flex-wrap justify-center">
-        {
-          metadata.slice(0,currentIndex).map((data) => (
-            <ArtCard
-              image= {data.image}
-              name = {data.name}
-            />
-          ))
-        }   
+    <>
+      <div className=" container mx-auto ">
+        <Collection
+          collections={filteredCollections}
+          filters={filters}
+          setFilters={setFilters}
+        />
       </div>
-      <button 
-        className="lg:mt-2 xl:mt-6 flex-shrink-0 inline-flex text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 border-0 py-2 px-6  rounded "
-        onClick={add}
-      > Load More </button>       
-    </div>
+    </>
   );
 };
 
