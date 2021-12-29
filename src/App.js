@@ -41,7 +41,7 @@ function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/wallet" element={<Wallet />} />
-          <Route path="/gallery" element={<Collection />} />
+          <Route path="/collection" element={<Collection />} />
           <Route path="/partners" element={<Partners />} />
         </Routes>
         <Footer />
