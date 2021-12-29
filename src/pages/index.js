@@ -14,7 +14,7 @@ const Home = () => {
               Welcome to Titan Wing
             </h1>
             <p className="text-base leading-8 pt-8">
-              TitanWing is a wingist network limited collection. They Live on
+              Titan Wing is a wingist network limited collection. They Live on
               the Solana blockchain and can be purchased from multiple market
               places ( see links above). The original Series were the Skellies
               you see above. Below you will find plans for future and current

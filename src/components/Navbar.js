@@ -1,126 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { ethers } from "ethers";
-
-import { METIS_TESTNET_STARDUST } from '../constants/network'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ toggle }) => {
-
-  const navigate = useNavigate()
-  const [connected, setConnected] = useState(false)
-
-  const isMetaMaskInstalled = () => {
-    if (typeof window.ethereum !== 'undefined') {
-        console.log('MetaMask is installed!');
-        return true
-    }else{
-        console.log("please install metamask")
-        return false
-    }
-  }
-
-  const toHex = (num) => {
-    return '0x'+num.toString(16)
-  }
-
-  const addNetworkToWallet = async(chain) => {
-    const params = {
-        chainId:  toHex(chain.chainId),
-        chainName: chain.name,
-        nativeCurrency: {
-            name: chain.nativeCurrency.name,
-            symbol: chain.nativeCurrency.symbol,
-            decimals: chain.nativeCurrency.decimals
-        },
-        rpcUrls: chain.rpc,
-        blockExplorerUrls: [ ((chain.explorers && chain.explorers.length > 0 && chain.explorers[0].url) ? chain.explorers[0].url : chain.infoURL) ]
-    }
-
-    await window.ethereum.request({
-            method: 'wallet_addEthereumChain',
-            params: [params],
-        })
-        .then((res) => {
-            console.log(res)
-            window.location.reload()
-            navigate('/wallet')
-        })
-        .catch((err) => {
-            console.log(err.message)
-        })
-  }
-
-  const changeWalletNetwork = async(chainID) => {
-    await window.ethereum.request({
-        method: 'wallet_switchEthereumChain',
-        params: [{ chainId: toHex(chainID) }], // chainId must be in hexadecimal numbers
-    })
-    .then((res) => {
-        window.location.reload()
-    })
-    .catch( async(error) => {
-        //@ts-ignore
-        console.log(error.code)
-        //@ts-ignore
-        if(error.code === 4902){
-          addNetworkToWallet(METIS_TESTNET_STARDUST)
-        }
-    })
-  } 
-
-  //if not connected show sign in pop-up(in-built)
-  const tryMetaMaskConnect = async () => {
-    await window.ethereum
-      .request({ method: 'eth_requestAccounts' })
-      .then( () => {
-        changeWalletNetwork(588)
-      })
-      .catch( (error) => {
-        if (error.code === 4001) {
-          // EIP-1193 userRejectedRequest error
-          console.log('Please connect to MetaMask.');
-        } else {
-          console.error(error);
-        }
-      });
-  }
-
-  const provider = new ethers.providers.Web3Provider(window.ethereum)
-  const isMetaMaskConnected = async () => {
-    const accounts = await provider.listAccounts();
-    console.log(accounts.length)
-    if(accounts.length > 0){
-      console.log("true")
-      setConnected(true)
-      return true
-    }else{
-      console.log("false")  
-      setConnected(false)
-      return false} 
-  }
-
-  useEffect(()=>{
-    isMetaMaskConnected() && setConnected(true)
-    // eslint-disable-next-line
-  },[])
-
-  const connectWallet = () => {
-    if( isMetaMaskInstalled() ){
-        tryMetaMaskConnect()
-    }else{
-        alert("please install metamask🤷‍♂️")
-    }
-  }
-
   return (
     <nav
-      className="flex justify-between items-center h-20 text-black text-sm font-medium relative shadow-sm"
+      className="flex justify-between items-center h-16 text-black text-sm font-medium relative shadow-sm"
       role="navigation"
     >
-      {isMetaMaskConnected}
-      
       <Link to="/" className="pl-8">
-        <h1 className="text-3xl font-semibold italic">TitanWing</h1>
+        <h1 className="text-3xl font-semibold italic">Titan Wing</h1>
       </Link>
       <div className="px-4 cursor-pointer md:hidden" onClick={toggle}>
         <svg
@@ -142,34 +30,11 @@ const Navbar = ({ toggle }) => {
         <Link to="/about" className="p-4">
           About
         </Link>
-        
-        {
-          connected
-            ?
-          <p  
-            className= " cursor-pointer p-4 lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 border-0 py-2 px-6 rounded" 
-          >
-            Connected ✔
-          </p> 
-            :
-          <p  
-            className=" cursor-pointer p-4 lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 border-0 py-2 px-6 rounded"
-            onClick={connectWallet}  
-          >
-            Connect Wallet
-          </p>
-        }
-
-        {
-          connected
-            &&
-          <Link to="/wallet" className="p-4 text-indigo-500 font-semibold">
-            Me
-          </Link>
-        }
-        
-        <Link to="/gallery" className="p-4">
-          Gallery
+        <Link to="/wallet" className="p-4">
+          Connect Wallet
+        </Link>
+        <Link to="/collection" className="p-4">
+          View Collection
         </Link>
         <Link to="/partners" className="p-4">
           Partners
