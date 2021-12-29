@@ -85,8 +85,8 @@ const Navbar = ({ toggle }) => {
       });
   }
 
-  const provider = new ethers.providers.Web3Provider(window.ethereum)
   const isMetaMaskConnected = async () => {
+    const provider = new ethers.providers.Web3Provider(window.ethereum)
     const accounts = await provider.listAccounts();
     console.log(accounts.length)
     if(accounts.length > 0){
@@ -100,7 +100,7 @@ const Navbar = ({ toggle }) => {
   }
 
   useEffect(()=>{
-    isMetaMaskConnected() && setConnected(true)
+    isMetaMaskInstalled() && isMetaMaskConnected() && setConnected(true)
     // eslint-disable-next-line
   },[])
 
