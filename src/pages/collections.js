@@ -21,6 +21,7 @@ const Collections = () => {
         {
           metadata.slice(0,currentIndex).map((data) => (
             <ArtCard
+              key = {data.dna}
               image= {data.image}
               name = {data.name}
             />

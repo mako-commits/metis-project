@@ -113,12 +113,10 @@ const Navbar = ({ toggle }) => {
   }
 
   return (
-    <nav
+    <div
       className="flex justify-between items-center h-20 text-black text-sm font-medium relative shadow-sm"
       role="navigation"
-    >
-      {isMetaMaskConnected}
-      
+    >      
       <Link to="/" className="pl-8">
         <h1 className="text-3xl font-semibold italic">TitanWing</h1>
       </Link>
@@ -175,7 +173,7 @@ const Navbar = ({ toggle }) => {
           Partners
         </Link>
       </div>
-    </nav>
+    </div>
   );
 };
 

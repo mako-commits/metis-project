@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import { Routes, Route, HashRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Home from "./pages/index";
@@ -34,7 +34,7 @@ function App() {
 
   return (
     <>
-      <HashRouter>
+      <Router>
         <Navbar toggle={toggle} />
         <Dropdown isOpen={isOpen} toggle={toggle} />
         <Routes>
@@ -45,7 +45,7 @@ function App() {
           <Route path="/partners" element={<Partners />} />
         </Routes>
         <Footer />
-      </HashRouter>
+      </Router>
     </>
   );
 }
