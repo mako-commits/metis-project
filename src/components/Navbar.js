@@ -85,7 +85,7 @@ const Navbar = ({ toggle }) => {
       });
   }
 
-  const provider = new ethers?.providers?.Web3Provider(window.ethereum)
+  const provider = new ethers?.providers.Web3Provider(window.ethereum)
   const isMetaMaskConnected = async () => {
     const accounts = await provider?.listAccounts();
     console.log(accounts.length)
