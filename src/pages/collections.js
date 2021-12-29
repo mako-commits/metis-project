@@ -28,7 +28,7 @@ const Collections = () => {
         }   
       </div>
       <button 
-        className="lg:mt-2 xl:mt-6 flex-shrink-0 inline-flex text-white bg-purple-800 border-0 py-2 px-6 focus:outline-none hover:bg-purple-400 rounded "
+        className="lg:mt-2 xl:mt-6 flex-shrink-0 inline-flex text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 border-0 py-2 px-6  rounded "
         onClick={add}
       > Load More </button>       
     </div>

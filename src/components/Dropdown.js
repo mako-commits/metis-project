@@ -17,9 +17,9 @@ const Dropdown = ({ isOpen, toggle }) => {
       <Link to="/about" className="p-4">
         About
       </Link>
-      <Link to="/wallet" className="p-4">
-        Connect Wallet
-      </Link>
+      <Link to="/wallet" className="p-4 lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  border-0 py-2 px-6 rounded ">
+          Connect Wallet
+        </Link>
       <Link to="/gallery" className="p-4">
         Gallery
       </Link>
