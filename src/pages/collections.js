@@ -45,6 +45,13 @@ const Collections = () => {
           setFilters={setFilters}
         />
       </div>
+      <button
+        className="lg:mt-2 xl:mt-6 flex-shrink-0 inline-flex text-white bg-purple-800 border-0 py-2 px-6 focus:outline-none hover:bg-purple-400 rounded "
+        onClick={add}
+      >
+        {" "}
+        Load More{" "}
+      </button>
     </>
   );
 };

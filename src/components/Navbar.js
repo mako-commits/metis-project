@@ -33,8 +33,8 @@ const Navbar = ({ toggle }) => {
         <Link to="/wallet" className="p-4">
           Connect Wallet
         </Link>
-        <Link to="/collection" className="p-4">
-          View Collection
+        <Link to="/gallery" className="p-4">
+          Gallery
         </Link>
         <Link to="/partners" className="p-4">
           Partners
