@@ -6,16 +6,19 @@ import axios from "axios";
 const Collections = () => {
   const [allCollections, setAllCollections] = useState([]);
   const [filteredCollections, setFilteredCollections] = useState([]);
-  const [filters, setFilters] = useState({ s: "" });
+  const [filters, setFilters] = useState({ s: "", sort: "" });
 
   useEffect(() => {
+    getCollection();
+  }, []);
+
+  const getCollection = () => {
     axios
       .get("./items.json")
       .then((res) => setAllCollections(res.data))
       .then((res) => setFilteredCollections(res.data))
       .catch((err) => console.log(err));
-  }, []);
-
+  };
   useEffect(() => {
     let collections = allCollections.filter(
       (p) =>
