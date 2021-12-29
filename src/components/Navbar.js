@@ -10,7 +10,7 @@ const Navbar = ({ toggle }) => {
   const [connected, setConnected] = useState(false)
 
   const isMetaMaskInstalled = () => {
-    if (typeof window.ethereum !== 'undefined') {
+    if (typeof window?.ethereum !== 'undefined') {
         console.log('MetaMask is installed!');
         return true
     }else{
@@ -36,7 +36,7 @@ const Navbar = ({ toggle }) => {
         blockExplorerUrls: [ ((chain.explorers && chain.explorers.length > 0 && chain.explorers[0].url) ? chain.explorers[0].url : chain.infoURL) ]
     }
 
-    await window.ethereum.request({
+    await window?.ethereum.request({
             method: 'wallet_addEthereumChain',
             params: [params],
         })
@@ -51,7 +51,7 @@ const Navbar = ({ toggle }) => {
   }
 
   const changeWalletNetwork = async(chainID) => {
-    await window.ethereum.request({
+    await window?.ethereum.request({
         method: 'wallet_switchEthereumChain',
         params: [{ chainId: toHex(chainID) }], // chainId must be in hexadecimal numbers
     })
@@ -70,7 +70,7 @@ const Navbar = ({ toggle }) => {
 
   //if not connected show sign in pop-up(in-built)
   const tryMetaMaskConnect = async () => {
-    await window.ethereum
+    await window?.ethereum
       .request({ method: 'eth_requestAccounts' })
       .then( () => {
         changeWalletNetwork(588)
@@ -85,9 +85,9 @@ const Navbar = ({ toggle }) => {
       });
   }
 
-  const provider = new ethers.providers.Web3Provider(window.ethereum)
+  const provider = new ethers?.providers?.Web3Provider(window.ethereum)
   const isMetaMaskConnected = async () => {
-    const accounts = await provider.listAccounts();
+    const accounts = await provider?.listAccounts();
     console.log(accounts.length)
     if(accounts.length > 0){
       console.log("true")
