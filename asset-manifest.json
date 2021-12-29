@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/metis-project/static/css/main.1bd2bd2c.css",
-    "main.js": "/metis-project/static/js/main.cd1173c4.js",
+    "main.css": "/metis-project/static/css/main.d309be94.css",
+    "main.js": "/metis-project/static/js/main.1aa531d3.js",
     "static/js/787.325f9e7c.chunk.js": "/metis-project/static/js/787.325f9e7c.chunk.js",
     "static/media/p3.jpg": "/metis-project/static/media/p3.30ca2d9f9b09a5e0db7b.jpg",
     "static/media/bayc-mutant-hero.jpg": "/metis-project/static/media/bayc-mutant-hero.906ca9b52524848dd2ec.jpg",
     "static/media/p1.jpg": "/metis-project/static/media/p1.51fd698d6903bb439881.jpg",
     "static/media/p2.jpg": "/metis-project/static/media/p2.5b1915d340752c93f262.jpg",
     "index.html": "/metis-project/index.html",
-    "main.1bd2bd2c.css.map": "/metis-project/static/css/main.1bd2bd2c.css.map",
-    "main.cd1173c4.js.map": "/metis-project/static/js/main.cd1173c4.js.map",
+    "main.d309be94.css.map": "/metis-project/static/css/main.d309be94.css.map",
+    "main.1aa531d3.js.map": "/metis-project/static/js/main.1aa531d3.js.map",
     "787.325f9e7c.chunk.js.map": "/metis-project/static/js/787.325f9e7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1bd2bd2c.css",
-    "static/js/main.cd1173c4.js"
+    "static/css/main.d309be94.css",
+    "static/js/main.1aa531d3.js"
   ]
 }
