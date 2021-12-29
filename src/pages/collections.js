@@ -1,51 +1,37 @@
-import React, { useEffect, useState } from "react";
-import Collection from "../components/Collection";
-import axios from "axios";
-// import items from '../components/items.json'
+import React, { useState } from "react";
+import { metadata } from '../constants/metadata'
+import ArtCard from "../components/ArtCard/ArtCard";
 
 const Collections = () => {
-  const [allCollections, setAllCollections] = useState([]);
-  const [filteredCollections, setFilteredCollections] = useState([]);
-  const [filters, setFilters] = useState({ s: "" });
+  
+  const metaLength = metadata.length
+  const [currentIndex, setCurrentindex] = useState(11)
 
-  useEffect(() => {
-    axios
-      .get("./items.json")
-      .then((res) => setAllCollections(res.data))
-      .then((res) => setFilteredCollections(res.data))
-      .catch((err) => console.log(err));
-  }, []);
-
-  useEffect(() => {
-    let collections = allCollections.filter(
-      (p) =>
-        p.item_name.toLowerCase().indexOf(filters.s.toLowerCase()) >= 0 ||
-        p.status.toLowerCase().indexOf(filters.s.toLowerCase()) >= 0
-    );
-
-    if (filters.sort === "price" || filters.sort === "status") {
-      collections.sort((a, b) => {
-        const diff = a.price - b.price;
-        if (diff === 0) return 0;
-
-        const sign = Math.abs(diff) / diff;
-        return filters.sort === "price" ? sign : -sign;
-      });
+  const add = () => {
+    if(currentIndex < metaLength){
+      setCurrentindex(currentIndex+11)
+    }else if(currentIndex === metaLength){
+      setCurrentindex(11)
     }
+  } 
 
-    setFilteredCollections(collections);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filters]);
   return (
-    <>
-      <div className=" container mx-auto ">
-        <Collection
-          collections={filteredCollections}
-          filters={filters}
-          setFilters={setFilters}
-        />
+    <div className="grid place-items-center my-10">
+      <div className = "container m-auto flex flex-wrap justify-center">
+        {
+          metadata.slice(0,currentIndex).map((data) => (
+            <ArtCard
+              image= {data.image}
+              name = {data.name}
+            />
+          ))
+        }   
       </div>
-    </>
+      <button 
+        className="lg:mt-2 xl:mt-6 flex-shrink-0 inline-flex text-white bg-purple-800 border-0 py-2 px-6 focus:outline-none hover:bg-purple-400 rounded "
+        onClick={add}
+      > Load More </button>       
+    </div>
   );
 };
 

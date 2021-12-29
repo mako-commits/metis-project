@@ -51,11 +51,11 @@ const Footer = () => {
                 </li>
               </nav>
             </div>
-            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
                 DEVELOPERS
               </h2>
-              <nav class="list-none mb-10">
+              <nav className="list-none mb-10">
                 <li>
                   <Link to="#" className=" text-gray-600 hover:text-gray-800">
                     Fork on Github
@@ -94,12 +94,12 @@ const Footer = () => {
           </div>
         </div>
         <div className="bg-gray-100 border-t-2 border-gray-700">
-          <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+          <div className="container px-5 py-10 mx-auto flex items-center sm:flex-row flex-col">
             <Link
               to="#"
               className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
             >
-              <span className="ml-3 text-xl">Titan Wing</span>
+              <span className="ml-3 text-xl">TitanWing</span>
             </Link>
 
             <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
@@ -139,7 +139,7 @@ const Footer = () => {
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  class="w-5 h-5"
+                  className="w-5 h-5"
                   viewBox="0 0 24 24"
                 >
                   <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
@@ -154,7 +154,7 @@ const Footer = () => {
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="0"
-                  class="w-5 h-5"
+                  className="w-5 h-5"
                   viewBox="0 0 24 24"
                 >
                   <path
