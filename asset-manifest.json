@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/metis-project/static/css/main.1bd2bd2c.css",
-    "main.js": "/metis-project/static/js/main.0ad303e2.js",
-    "static/js/787.325f9e7c.chunk.js": "/metis-project/static/js/787.325f9e7c.chunk.js",
-    "static/media/p3.jpg": "/metis-project/static/media/p3.30ca2d9f9b09a5e0db7b.jpg",
-    "static/media/bayc-mutant-hero.jpg": "/metis-project/static/media/bayc-mutant-hero.906ca9b52524848dd2ec.jpg",
-    "static/media/p1.jpg": "/metis-project/static/media/p1.51fd698d6903bb439881.jpg",
-    "static/media/p2.jpg": "/metis-project/static/media/p2.5b1915d340752c93f262.jpg",
-    "index.html": "/metis-project/index.html",
-    "main.1bd2bd2c.css.map": "/metis-project/static/css/main.1bd2bd2c.css.map",
-    "main.0ad303e2.js.map": "/metis-project/static/js/main.0ad303e2.js.map",
-    "787.325f9e7c.chunk.js.map": "/metis-project/static/js/787.325f9e7c.chunk.js.map"
+    "main.css": "/static/css/main.241861f9.css",
+    "main.js": "/static/js/main.48f3a7a6.js",
+    "static/js/787.325f9e7c.chunk.js": "/static/js/787.325f9e7c.chunk.js",
+    "static/media/p3.jpg": "/static/media/p3.30ca2d9f9b09a5e0db7b.jpg",
+    "static/media/bayc-mutant-hero.jpg": "/static/media/bayc-mutant-hero.906ca9b52524848dd2ec.jpg",
+    "static/media/p1.jpg": "/static/media/p1.51fd698d6903bb439881.jpg",
+    "static/media/p2.jpg": "/static/media/p2.5b1915d340752c93f262.jpg",
+    "index.html": "/index.html",
+    "main.241861f9.css.map": "/static/css/main.241861f9.css.map",
+    "main.48f3a7a6.js.map": "/static/js/main.48f3a7a6.js.map",
+    "787.325f9e7c.chunk.js.map": "/static/js/787.325f9e7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1bd2bd2c.css",
-    "static/js/main.0ad303e2.js"
+    "static/css/main.241861f9.css",
+    "static/js/main.48f3a7a6.js"
   ]
 }
