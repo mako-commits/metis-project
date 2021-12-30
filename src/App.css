@@ -3,3 +3,8 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+.popup-close-btn {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 20px;
+}
