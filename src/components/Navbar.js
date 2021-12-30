@@ -114,7 +114,7 @@ const Navbar = ({ toggle }) => {
     if (isMetaMaskInstalled()) {
       tryMetaMaskConnect();
     } else {
-      alert("please install metamask🤷‍♂️");
+      alert("Please Install Metamask");
     }
   };
 
@@ -124,7 +124,7 @@ const Navbar = ({ toggle }) => {
       role="navigation"
     >
       <Link to="/" className="pl-8">
-        <h1 className="text-3xl font-semibold italic">TitanWing</h1>
+        <h1 className="text-3xl font-semibold italic flex items-baseline">TitanWing <p className="pl-2 text-blue-500 text-xs not-italic font-medium tracking-wider">BETA</p></h1>
       </Link>
       <div className="px-4 cursor-pointer md:hidden" onClick={toggle}>
         <svg

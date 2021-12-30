@@ -99,7 +99,7 @@ const Footer = () => {
               to="#"
               className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
             >
-              <span className="ml-3 text-xl">TitanWing</span>
+              <span className="ml-3 text-xl flex items-baseline">TitanWing <p className="pl-2 text-blue-500 text-xs not-italic font-medium tracking-wider">BETA</p></span>
             </Link>
 
             <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
