@@ -42,7 +42,12 @@ const Navbar = ({ toggle }) => {
       role="navigation"
     >
       <Link to="/" className="pl-8">
-        <h1 className="text-3xl font-semibold italic flex items-baseline">TitanWing <p className="pl-2 text-blue-500 text-xs not-italic font-medium tracking-wider">BETA</p></h1>
+        <h1 className="text-3xl font-semibold italic flex items-baseline">
+          TitanWing{" "}
+          <p className="pl-2 text-blue-500 text-xs not-italic font-medium tracking-wider">
+            BETA
+          </p>
+        </h1>
       </Link>
       <div className="px-4 cursor-pointer md:hidden" onClick={toggle}>
         <svg
@@ -63,6 +68,9 @@ const Navbar = ({ toggle }) => {
       <div className="pr-8 md:block  hidden">
         <Link to="/about" className="p-4">
           About
+        </Link>
+        <Link to="/dashboard" className="p-4">
+          Dashboard
         </Link>
         <Link to="/gallery" className="p-4">
           Gallery
