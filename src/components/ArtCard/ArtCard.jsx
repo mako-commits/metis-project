@@ -1,4 +1,4 @@
-import autoprefixer from "autoprefixer";
+// import autoprefixer from "autoprefixer";
 import React, { useState } from "react";
 import Modal from "react-modal";
 Modal.setAppElement("#root");
