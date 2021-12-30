@@ -18,7 +18,7 @@ const Collections = () => {
     <div className="grid place-items-center my-10">
       <div className="container m-auto flex flex-wrap justify-center">
         {metadata.slice(0, currentIndex).map((data) => (
-          <ArtCard key={data.dna} image={data.image} name={data.name} />
+          <ArtCard key={data.dna} image={data.image} name={data.name} attributes={data.attributes} edition={data.edition} />
         ))}
       </div>
       <button

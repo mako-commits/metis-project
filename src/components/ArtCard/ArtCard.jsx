@@ -1,9 +1,50 @@
-// import autoprefixer from "autoprefixer";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Modal from "react-modal";
+import { ethers } from "ethers";
+
+import { rarity } from '../../constants/rarity'
+import { isMetaMaskInstalled, tryMetaMaskConnect } from "../../constants/walletLogic";
+import { mintLogic } from "../../constants/mintLogic";
+
 Modal.setAppElement("#root");
-const ArtCard = ({ image, name }) => {
+const ArtCard = ({ image, name, attributes, edition }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+ 
+  const [connected, setConnected] = useState(false);
+
+  const isMetaMaskConnected = async () => {
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const accounts = await provider.listAccounts();
+    console.log(accounts.length);
+    if (accounts.length > 0) {
+        console.log("true");
+        setConnected(true);
+        return true;
+    } else {
+        console.log("false");
+        setConnected(false);
+        return false;
+    }
+  };
+
+  const connectWallet = () => {
+    if (isMetaMaskInstalled()) {
+        tryMetaMaskConnect();
+    } else {
+        alert("Please Install Metamask");
+    }
+  };
+
+  useEffect(() => {
+    isMetaMaskInstalled() && isMetaMaskConnected() && setConnected(true);
+    // eslint-disable-next-line
+  }, []);
+
+  const mint = () =>{
+    // alert("mint")
+    // alert(edition)
+    mintLogic.prepURI(edition)
+  }
   return (
     <>
       <div
@@ -18,6 +59,7 @@ const ArtCard = ({ image, name }) => {
         />
         <p className="mt-4">{name}</p>
       </div>
+
       <Modal
         className="popup"
         isOpen={modalIsOpen}
@@ -29,7 +71,7 @@ const ArtCard = ({ image, name }) => {
           content: {
             display: "flex",
             flexDirection: "column",
-            width: "80vw",
+            width: "fit-content",
             height: "auto",
             margin: "auto",
             marginTop: "50px",
@@ -63,16 +105,41 @@ const ArtCard = ({ image, name }) => {
               alt="blog"
             />
             <div className="p-6">
-              <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                Rare Piece
-              </h2>
               <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
                 {name}
               </h1>
-              <p className="leading-relaxed mb-3">background: 30%</p>
-              <p className="leading-relaxed mb-3">rare eye: 33%</p>
-              <p className="leading-relaxed mb-3">cloth: 21%</p>
+
+              <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1 pb-2">
+                Rarity
+              </h2>
+                {
+                  attributes?.map((trait) => {
+                    const traitValue = rarity[trait.trait_type].filter((item) => item.trait === trait.value )[0].occurrence.slice(-7) 
+                    
+                    return(
+                      <div className="leading-relaxed mb-3 bold flex items-baseline">
+                        <p className="italic ">{trait.trait_type}</p>: <p className="pl-2 text-sm">{traitValue}</p>
+                      </div>
+                    )
+                  }) 
+                }
             </div>
+
+              {connected ? (
+                <button 
+                className="cursor-pointer text-white bg-purple-800 border-0 py-2 px-4 m-auto rounded "
+                onClick={mint}
+              >
+                Buy
+              </button>
+              ) : (
+                <p
+                  className=" cursor-pointer text-white bg-purple-800 border-0 py-2 px-4 m-auto rounded"
+                  onClick={connectWallet}
+                >
+                  Connect Wallet
+                </p>
+              )}
           </div>
         </div>
       </Modal>
