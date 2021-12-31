@@ -8,13 +8,13 @@ const Roadmap = () => {
         <div class="container px-6 py-10 mx-auto">
           <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white italic">
             Our Awesome <br />
-            <span class="underline decoration-purple-800">Roadmap</span>
+            <span class="underline decoration-purple-800">NFT Roadmap</span>
           </h1>
 
-          <p class="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300">
+          {/* <p class="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum
             quam voluptatibus
-          </p>
+          </p> */}
 
           <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
             <div class="p-8 space-y-3 border-2 border-purple-800 dark:border-purple-800 rounded-xl">
@@ -42,13 +42,13 @@ const Roadmap = () => {
               </span>
 
               <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white italic">
-                elegant Collections
+                Daily Reward
               </h1>
 
               <p class="text-gray-500 dark:text-gray-300">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Provident ab nulla quod dignissimos vel non corrupti doloribus
-                voluptatum eveniet
+                Holders of our NFT receive 100 CNTM daily for the next 10 years
+                and which would enables them partake in voting, redeem rewards,
+                and more being planned.
               </p>
               <Link
                 to="#"
@@ -90,13 +90,13 @@ const Roadmap = () => {
               </span>
 
               <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white italic">
-                Easy to customiztions
+                Exclusive Access
               </h1>
 
               <p class="text-gray-500 dark:text-gray-300">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Provident ab nulla quod dignissimos vel non corrupti doloribus
-                voluptatum eveniet
+                In partnership with top luxury brands in Africa, our NFT holders
+                would be rewarded with top of the line features such as one
+                night presidential stay at The Palms Hotel, Abuja.
               </p>
               <Link
                 to="#"
@@ -138,13 +138,13 @@ const Roadmap = () => {
               </span>
 
               <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white italic">
-                Simple & clean designs
+                Expansion
               </h1>
 
               <p class="text-gray-500 dark:text-gray-300">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Provident ab nulla quod dignissimos vel non corrupti doloribus
-                voluptatum eveniet
+                With more brands getting on board our platform, this would only
+                drive the demand for the NFT and bring in more users to our
+                network and to our partners
               </p>
               <Link
                 to="#"
