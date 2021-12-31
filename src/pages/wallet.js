@@ -5,13 +5,15 @@ import { db } from "../config/firebase";
 import DashNav from "../components/DashNav";
 const Wallet = () => {
   const [minted, setMinted] = useState([]);
-
+  
   useEffect(() => {
-    db.collection("minted").onSnapshot((images) => {
-      let dna = images.docs.map((image) => image.data());
-      dna = dna.map((item) => item.dna).flat();
-      setMinted(dna);
-    });
+    db.collection("minted")
+      .doc(window.ethereum.selectedAddress)
+      .onSnapshot( snapshot => {
+          let dna = snapshot.data();
+          dna = dna.dna;
+          setMinted(dna)
+      });
   }, []);
 
   const mintedIncludes = (_dna) => {

@@ -15,13 +15,13 @@ const ArtCard = ({ image, name, attributes, edition, dna}) => {
   const isMetaMaskConnected = async () => {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const accounts = await provider.listAccounts();
-    console.log(accounts.length);
+    // console.log(accounts.length);
     if (accounts.length > 0) {
-        console.log("true");
+        // console.log("true");
         setConnected(true);
         return true;
     } else {
-        console.log("false");
+        // console.log("false");
         setConnected(false);
         return false;
     }
@@ -114,11 +114,11 @@ const ArtCard = ({ image, name, attributes, edition, dna}) => {
                 Rarity
               </h2>
                 {
-                  attributes?.map((trait) => {
+                  attributes?.map((trait, index) => {
                     const traitValue = rarity[trait.trait_type].filter((item) => item.trait === trait.value )[0].occurrence.slice(-7) 
                     
                     return(
-                      <div className="leading-relaxed mb-3 bold flex items-baseline" key={trait.dna}>
+                      <div key={index} className="leading-relaxed mb-3 bold flex items-baseline" >
                         <p className="italic ">{trait.trait_type}</p>: <p className="pl-2 text-sm">{traitValue}</p>
                       </div>
                     )
