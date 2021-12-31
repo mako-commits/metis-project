@@ -7,7 +7,7 @@ import { isMetaMaskInstalled, tryMetaMaskConnect } from "../../constants/walletL
 import { mintLogic } from "../../constants/mintLogic";
 
 Modal.setAppElement("#root");
-const ArtCard = ({ image, name, attributes, edition }) => {
+const ArtCard = ({ image, name, attributes, edition, dna}) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
  
   const [connected, setConnected] = useState(false);
@@ -43,20 +43,21 @@ const ArtCard = ({ image, name, attributes, edition }) => {
   const mint = () =>{
     // alert("mint")
     // alert(edition)
-    mintLogic.prepURI(edition)
+    mintLogic.prepURI(edition, dna)
   }
   return (
     <>
       <div
-        className="mx-8 my-4 rounded-md"
+        className="mx-8 my-4 rounded-md cursor-pointer"
         onClick={() => setModalIsOpen(true)}
       >
         <img
           loading=""
-          className="lg:h-72 md:h-60 sm:h-48 w-auto bg-gray-200 object-contain object-center rounded-md shadow-md"
+          className="lg:h-72 md:h-60 sm:h-48 w-auto bg-gray-200 object-contain object-center rounded-md shadow-md "
           src={image}
           alt="blog"
         />
+
         <p className="mt-4">{name}</p>
       </div>
 
@@ -117,7 +118,7 @@ const ArtCard = ({ image, name, attributes, edition }) => {
                     const traitValue = rarity[trait.trait_type].filter((item) => item.trait === trait.value )[0].occurrence.slice(-7) 
                     
                     return(
-                      <div className="leading-relaxed mb-3 bold flex items-baseline">
+                      <div className="leading-relaxed mb-3 bold flex items-baseline" key={trait.dna}>
                         <p className="italic ">{trait.trait_type}</p>: <p className="pl-2 text-sm">{traitValue}</p>
                       </div>
                     )

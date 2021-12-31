@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { metadata } from "../constants/metadata";
 import ArtCard from "../components/ArtCard/ArtCard";
+import { db } from "../config/firebase";
 
 const Collections = () => {
   const metaLength = metadata.length;
   const [currentIndex, setCurrentindex] = useState(11);
+  const   [minted, setMinted] = useState([])
 
   const add = () => {
     if (currentIndex < metaLength) {
@@ -14,11 +16,26 @@ const Collections = () => {
     }
   };
 
+  useEffect(() => {
+    db.collection('minted')
+      .onSnapshot(images => {
+        let dna = images.docs.map( image=> image.data() )
+        dna =  (dna.map((item) => item.dna).flat())        
+        setMinted( dna );
+    });
+  },[])
+
+  const mintedIncludes = (_dna) => {
+    return minted.includes(_dna)
+  }
+
   return (
     <div className="grid place-items-center my-10">
       <div className="container m-auto flex flex-wrap justify-center">
         {metadata.slice(0, currentIndex).map((data) => (
-          <ArtCard key={data.dna} image={data.image} name={data.name} attributes={data.attributes} edition={data.edition} />
+          <div key={data.dna} className={`${mintedIncludes(data.dna) && "pointer-events-none opacity-30 cursor-default"}`}>
+            <ArtCard dna={data.dna} image={data.image} name={data.name} attributes={data.attributes} edition={data.edition} minted={minted}/>
+          </div>
         ))}
       </div>
       <button
