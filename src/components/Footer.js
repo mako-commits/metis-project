@@ -7,14 +7,14 @@ const Footer = () => {
       <footer className=" body-font bg-gray-100">
         <div className="container px-5 py-20 mx-auto">
           <div className="flex flex-wrap md:text-left text-center order-first">
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+            <div className="lg:w-1/2 md:w-1/2 w-full px-4">
               <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
                 CONTACT
               </h2>
               <nav className="list-none mb-10">
                 <li>
                   <Link
-                    to="https://github.com/pythagoras-dev/metis-project"
+                    hash="https://github.com/pythagoras-dev/metis-project"
                     className=" text-gray-600 hover:text-gray-800"
                   >
                     Our Github
@@ -78,14 +78,24 @@ const Footer = () => {
                 </li>
               </nav>
             </div> */}
-            <div className="lg:w-3/4 md:w-1/2 w-full px-1">
+            <div className="lg:w-1/2 md:w-1/2 w-full px-1">
               <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3 flex justify-center items-end md:justify-start">
                 SUBSCRIBE
               </h2>
-              <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-end">
+              <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap justify-center items-end md:justify-start">
                 <div className="relative w-2/3 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
                   <input
+                    placeholder="Name"
                     type="text"
+                    id="footer-field"
+                    name="footer-field"
+                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-blue-200 focus:border-purple-400 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  />
+                </div>
+                <div className="relative w-2/3 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
+                  <input
+                    placeholder="Email"
+                    type="email"
                     id="footer-field"
                     name="footer-field"
                     className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-blue-200 focus:border-purple-400 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
