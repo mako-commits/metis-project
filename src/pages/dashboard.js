@@ -104,7 +104,7 @@ const Dashboard = () => {
               </div>
               {/*  */}
             </div>
-            <div className="xl:w-1/3 md:w-1/2 p-4">
+            {/* <div className="xl:w-1/3 md:w-1/2 p-4">
               <div className="shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-800">
                 <div className="flex items-center">
                   <span className="rounded-xl relative p-4 bg-purple-200">
@@ -143,9 +143,9 @@ const Dashboard = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/*  */}
-            <div className="xl:w-1/3 md:w-1/2 p-4">
+            {/* <div className="xl:w-1/3 md:w-1/2 p-4">
               <div className="shadow-lg rounded-2xl px-4 py-6 w-full bg-white dark:bg-gray-800 relative">
                 <p className="text-sm w-max text-gray-700 dark:text-white font-semibold border-b border-gray-200">
                   Trends
@@ -228,7 +228,7 @@ const Dashboard = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/*  */}
             <div className="xl:w-1/3 md:w-1/2 p-4">
               <div className="shadow-lg rounded-xl w-full md:w-80 p-4 bg-white dark:bg-gray-800 relative overflow-hidden">
