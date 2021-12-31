@@ -2,10 +2,13 @@ import React from "react";
 import Hero from "../components/Hero";
 import Logo from "../components/Logo";
 import Roadmap from "../components/Roadmap";
-
-const Home = () => {
+import Navbar from "../components/Navbar";
+import Dropdown from "../components/Dropdown";
+const Home = (props) => {
   return (
     <>
+      <Navbar toggle={props.toggle} />
+      <Dropdown isOpen={props.isOpen} toggle={props.toggle} />
       <section className="">
         <div className="container mx-auto flex flex-col justify-center items-center ">
           <Hero />

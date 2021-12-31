@@ -6,16 +6,17 @@ const Dashboard = () => {
   return (
     <>
       <DashNav />
-      <main>
-        <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-semibold text-gray-800 dark:text-black">
-            Good day
-          </h1>
-          <h2 className="text-md text-gray-400">
-            So Here&#x27;s what&#x27;s happening with your account today.
-          </h2>
-
-          <div className="flex flex-wrap -m-4  rounded-lg my-10">
+      <main className="bg-gray-400">
+        <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8 ">
+          <div className="border-2  bg-gray-200 shadow-lg rounded-lg py-5 px-5">
+            <h1 className="text-4xl font-semibold text-gray-800 dark:text-black">
+              Good day
+            </h1>
+            <h2 className="text-md text-black">
+              So here&#x27;s what&#x27;s happening with your account today.
+            </h2>
+          </div>
+          <div className="flex flex-wrap  border-2 border-dashed bg-gray-200 shadow-lg  rounded-lg my-10">
             <div className="xl:w-1/3 md:w-1/2 p-4">
               <div className="shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-800">
                 <div className="flex items-center">
@@ -233,10 +234,10 @@ const Dashboard = () => {
               <div className="shadow-lg rounded-xl w-full md:w-80 p-4 bg-white dark:bg-gray-800 relative overflow-hidden">
                 <div className="w-full flex items-center justify-between mb-8">
                   <p className="text-gray-800 dark:text-white text-xl font-normal">
-                    Activity
+                    Offers
                   </p>
                   <Link
-                    to=""
+                    to="/offer"
                     className="flex items-center text-sm hover:text-gray-600 dark:text-gray-50 dark:hover:text-white text-gray-300 border-0 focus:outline-none"
                   >
                     VIEW ALL
@@ -258,7 +259,7 @@ const Dashboard = () => {
                     <div className="flex text-sm flex-col w-full ml-2 items-start justify-between">
                       <p className="text-gray-700 dark:text-white">
                         <span class="font-bold mr-1">Andrea</span>
-                        uploaded 3 documents on concept deisgn home page
+                        I'll like this item
                       </p>
                       <p className="text-gray-300">Aug 10</p>
                     </div>
@@ -280,7 +281,7 @@ const Dashboard = () => {
                     <div className="flex text-sm flex-col w-full ml-2 items-start justify-between">
                       <p className="text-gray-700 dark:text-white">
                         <span className="font-bold mr-1">Karen</span>
-                        leave some comments on concept deisgn support page
+                        Care for a peer-to-peer swap?
                       </p>
                       <p className="text-gray-300">Aug 10</p>
                     </div>
@@ -302,8 +303,7 @@ const Dashboard = () => {
                     <div className="flex text-sm flex-col w-full ml-2 items-start justify-between">
                       <p className="text-gray-700 dark:text-white">
                         <span className="font-bold mr-1">Karen</span>
-                        change project description to &quot;SubMarine protection
-                        project&quot;
+                        Care for a peer-to-peer swap?
                       </p>
                       <p className="text-gray-300">Aug 09</p>
                     </div>
@@ -324,8 +324,8 @@ const Dashboard = () => {
                   <div className="flex items-center w-full justify-between">
                     <div className="flex text-sm flex-col w-full ml-2 items-start justify-between">
                       <p class="text-gray-700 dark:text-white">
-                        <span className="font-bold mr-1">John</span>
-                        uploaded 17 pictures on concept deisgn galery page
+                        <span className="font-bold mr-1">John</span>I want this
+                        item
                       </p>
                       <p className="text-gray-300">Aug 1</p>
                     </div>

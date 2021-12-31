@@ -1,9 +1,13 @@
 import React from "react";
 import Cards from "../components/Cards";
+import Navbar from "../components/Navbar";
+import Dropdown from "../components/Dropdown";
 
-const About = () => {
+const About = (props) => {
   return (
     <>
+      <Navbar toggle={props.toggle} />
+      <Dropdown isOpen={props.isOpen} toggle={props.toggle} />
       <div className="container mx-auto flex flex-col justify-center items-center lg:w-10/12 w-4/5">
         <h1 className="lg:text-4xl text-xl italic uppercase font-black mt-7">
           The team
