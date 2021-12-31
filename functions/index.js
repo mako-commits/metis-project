@@ -357,7 +357,9 @@ exports.autosend= functions.pubsub.schedule('0 14 * * *').onRun((context)=>{
         const url=`https://stardust-explorer.metis.io/api?module=account&action=txlist&address=${walletaddress}&sort=asc`;
         ax.get(url).then(async response=>{
             console.log(response.data);
-            return response.data;
+            var d=response.data;
+            console.log(d.result);
+            return d.result;
         }).catch((error)=>console.log(error))
         })
 
