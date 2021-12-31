@@ -6,11 +6,11 @@ const user = {
   name: "Tom Cook",
   email: "tom@example.com",
   imageUrl:
-    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    "https://avatars.dicebear.com/api/bottts/hjvbkvt.svg",
 };
 const navigation = [
   { name: "Dashboard", href: "/dashboard", current: true },
-  { name: "History", href: "/history", current: false },
+  // { name: "History", href: "/history", current: false },
   { name: "Offers", href: "/offer", current: false },
 ];
 const userNavigation = [

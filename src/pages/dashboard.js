@@ -9,7 +9,7 @@ const Dashboard = () => {
       <main>
         <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-semibold text-gray-800 dark:text-black">
-            Good afternoom, Charlie
+            Good day
           </h1>
           <h2 className="text-md text-gray-400">
             So Here&#x27;s what&#x27;s happening with your account today.
@@ -42,7 +42,7 @@ const Dashboard = () => {
                 </div>
                 <div className="flex flex-col justify-start">
                   <p className="text-gray-700 dark:text-gray-100 text-4xl text-left font-bold my-4">
-                    34,500
+                    151,200
                     <span className="text-sm">$</span>
                   </p>
                   <div className="flex items-center text-green-500 text-sm">
@@ -78,12 +78,12 @@ const Dashboard = () => {
                     </svg>
                   </span>
                   <p className="text-md text-black dark:text-white ml-2">
-                    Wings Curent Value
+                    CNTM Curent Value
                   </p>
                 </div>
                 <div className="flex flex-col justify-start">
                   <p className="text-gray-700 dark:text-gray-100 text-4xl text-left font-bold my-4">
-                    34,500
+                    3,500
                     <span className="text-sm">$</span>
                   </p>
                   <div className="flex items-center text-green-500 text-sm">
@@ -119,13 +119,13 @@ const Dashboard = () => {
                     </svg>
                   </span>
                   <p className="text-md text-black dark:text-white ml-2">
-                    Some NFT Value
+                    Last Titan Wing sold at
                   </p>
                 </div>
                 <div className="flex flex-col justify-start">
                   <p className="text-gray-700 dark:text-gray-100 text-4xl text-left font-bold my-4">
-                    3,500
-                    <span className="text-sm">$</span>
+                    0.5
+                    <span className="text-sm">CNTM</span>
                   </p>
                   <div className="flex items-center text-green-500 text-sm">
                     <svg
@@ -169,9 +169,9 @@ const Dashboard = () => {
                 </div>
                 <div className="dark:text-white">
                   <div className="flex items-center pb-2 mb-2 text-sm space-x-12 md:space-x-24 justify-between border-b border-gray-200">
-                    <p>Bored Apps</p>
+                    <p>Titan Wings</p>
                     <div className="flex items-end text-xs">
-                      34
+                      364
                       <span className="flex items-center">
                         <svg
                           width="20"
@@ -207,7 +207,7 @@ const Dashboard = () => {
                     </div>
                   </div>
                   <div className="flex items-center text-sm space-x-12 md:space-x-24 justify-between">
-                    <p>Tigers NFT</p>
+                    <p>Bored Apes</p>
                     <div className="flex items-end text-xs">
                       45
                       <span className="flex items-center">
