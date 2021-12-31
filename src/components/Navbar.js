@@ -74,9 +74,9 @@ const Navbar = ({ toggle }) => {
         <Link to="/gallery" className="p-4">
           Gallery
         </Link>
-        <Link to="/partners" className="p-4">
+        {/* <Link to="/partners" className="p-4">
           Partners
-        </Link>
+        </Link> */}
         {connected ? (
           <p className=" cursor-pointer p-4 lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-gradient-to-r from-purple-800 via-purple-800 to-purple-800 border-0 py-2 px-6 rounded">
             Connected ✔
