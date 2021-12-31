@@ -26,7 +26,7 @@ const Wallet = () => {
         <div className="rounded-full bg-red-400 w-32" >
           <img className="rounded p-4" alt ="profile" src={`https://avatars.dicebear.com/api/bottts/${window.ethereum.selectedAddress}.svg`} />
         </div>
-        <p className="text-lg font-bold pt-2">{ (window.ethereum.selectedAddress).slice(0, 6) }</p>
+        <p className="text-lg font-bold pt-2">{ (window.ethereum.selectedAddress)?.slice(0, 6) }</p>
       </div>
 
       <div>
