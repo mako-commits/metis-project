@@ -1,22 +1,22 @@
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import { Link } from "react-router-dom";
 
 const user = {
   name: "Tom Cook",
   email: "tom@example.com",
-  imageUrl:
-    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+  imageUrl: "https://avatars.dicebear.com/api/bottts/hjvbkvt.svg",
 };
 const navigation = [
-  { name: "Dashboard", href: "/dashboard", current: true },
-  { name: "History", href: "/history", current: false },
+  { name: "Wallet", href: "/wallet", current: true },
+  { name: "My Dashboard", href: "/dashboard", current: false },
   { name: "Offers", href: "/offer", current: false },
 ];
 const userNavigation = [
   { name: "Your Profile", href: "#" },
   { name: "Settings", href: "#" },
-  { name: "Sign out", href: "#" },
+  { name: "Back to home", href: "/" },
 ];
 
 function classNames(...classes) {
@@ -33,7 +33,15 @@ export default function DashNav() {
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                   <div className="flex items-center">
-                    <div className="flex-shrink-0 text-white lg:hidden">
+                    <Link to="/" className="pl-8">
+                      <h1 className="text-3xl font-semibold italic flex items-baseline text-white">
+                        TitanWing{" "}
+                        <p className="pl-2 text-blue-500 text-xs not-italic font-medium tracking-wider">
+                          BETA
+                        </p>
+                      </h1>
+                    </Link>
+                    <div className="flex-shrink-0 text-white ">
                       <h1>Dashboard</h1>
                     </div>
                     <div className="hidden md:block">

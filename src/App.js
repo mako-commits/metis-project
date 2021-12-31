@@ -37,8 +37,8 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar toggle={toggle} />
-        <Dropdown isOpen={isOpen} toggle={toggle} />
+        {/* <Navbar toggle={toggle} />
+        <Dropdown isOpen={isOpen} toggle={toggle} /> */}
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/about" element={<About />} />

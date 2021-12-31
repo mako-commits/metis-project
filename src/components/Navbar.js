@@ -2,7 +2,10 @@ import { ethers } from "ethers";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { isMetaMaskInstalled, tryMetaMaskConnect } from "../constants/walletLogic";
+import {
+  isMetaMaskInstalled,
+  tryMetaMaskConnect,
+} from "../constants/walletLogic";
 
 const Navbar = ({ toggle }) => {
   const [connected, setConnected] = useState(false);
@@ -12,21 +15,21 @@ const Navbar = ({ toggle }) => {
     const accounts = await provider.listAccounts();
     console.log(accounts.length);
     if (accounts.length > 0) {
-        console.log("true");
-        setConnected(true);
-        return true;
+      console.log("true");
+      setConnected(true);
+      return true;
     } else {
-        console.log("false");
-        setConnected(false);
-        return false;
+      console.log("false");
+      setConnected(false);
+      return false;
     }
   };
 
   const connectWallet = () => {
     if (isMetaMaskInstalled()) {
-        tryMetaMaskConnect();
+      tryMetaMaskConnect();
     } else {
-        alert("Please Install Metamask");
+      alert("Please Install Metamask");
     }
   };
 
@@ -34,7 +37,6 @@ const Navbar = ({ toggle }) => {
     isMetaMaskInstalled() && isMetaMaskConnected() && setConnected(true);
     // eslint-disable-next-line
   }, []);
-
 
   return (
     <div
@@ -68,9 +70,6 @@ const Navbar = ({ toggle }) => {
       <div className="pr-8 md:block  hidden">
         <Link to="/about" className="p-4">
           About
-        </Link>
-        <Link to="/dashboard" className="p-4">
-          Dashboard
         </Link>
         <Link to="/gallery" className="p-4">
           Gallery
