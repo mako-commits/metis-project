@@ -2,8 +2,7 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import Dropdown from "./components/Dropdown";
+
 import About from "./pages/about";
 import Wallet from "./pages/wallet";
 import Collection from "./pages/collections";
@@ -14,10 +13,6 @@ import Home from "./pages";
 import Offer from "./pages/views/offer";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
 
   useEffect(() => {
     const hideMenu = () => {
@@ -37,8 +32,8 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar toggle={toggle} />
-        <Dropdown isOpen={isOpen} toggle={toggle} />
+        {/* <Navbar toggle={toggle} />
+        <Dropdown isOpen={isOpen} toggle={toggle} /> */}
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/about" element={<About />} />

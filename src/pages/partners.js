@@ -1,9 +1,12 @@
 import React from "react";
 import Logo from "../components/Logo";
-
-const Partners = () => {
+import Navbar from "../components/Navbar";
+import Dropdown from "../components/Dropdown";
+const Partners = (props) => {
   return (
     <>
+      <Navbar toggle={props.toggle} />
+      <Dropdown isOpen={props.isOpen} toggle={props.toggle} />
       <div class="container px-6 py-16 mx-auto text-center">
         <div class="max-w-xl mx-auto">
           <h1 class="lg:text-4xl text-xl italic uppercase font-black ">
