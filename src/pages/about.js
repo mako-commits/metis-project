@@ -29,9 +29,8 @@ const About = (props) => {
           recent github actions hackathon.
         </p>
         <p className="text-base leading-8 py-4">
-          Mustapha Mubarak just your regular developer. He loves to code and
-          design websites. He's an enthusiast for data analytics and AI
-          programmming.
+          Mustapha Mubarak a frontend developer. He loves to code and design
+          websites. He's a data analytics and AI programmming enthusiast.
         </p>
       </div>
 
