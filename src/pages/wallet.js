@@ -7,16 +7,23 @@ const Wallet = () => {
   const [minted, setMinted] = useState([]);
   
   useEffect(() => {
+    const magic =() => {
+      window.ethereum.selectedAddress !== null 
+      &&
+      db.collection("minted")
+        .doc(window.ethereum.selectedAddress)
+        .onSnapshot( snapshot => {
+            let dna = snapshot.data();
+            dna = dna.dna;
+            setMinted(dna)
+        });
+    } 
+
+    const interval = setInterval( () => {
+      magic()
+    }, 1000);
+    return () => clearInterval(interval);
     
-    window.ethereum.selectedAddress !== null 
-    &&
-    db.collection("minted")
-      .doc(window.ethereum.selectedAddress)
-      .onSnapshot( snapshot => {
-          let dna = snapshot.data();
-          dna = dna.dna;
-          setMinted(dna)
-      });
   }, []);
 
   const mintedIncludes = (_dna) => {
