@@ -4,24 +4,24 @@ import { Link } from "react-router-dom";
 const Roadmap = () => {
   return (
     <>
-      <section class="bg-white dark:bg-gray-800 mt-10">
-        <div class="container px-6 py-10 mx-auto">
-          <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white italic">
+      <section className="bg-white dark:bg-gray-800 mt-10">
+        <div className="container px-6 py-10 mx-auto">
+          <h1 className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white italic">
             Our Awesome <br />
-            <span class="underline decoration-purple-800">NFT Roadmap</span>
+            <span className="underline decoration-purple-800">NFT Roadmap</span>
           </h1>
 
-          {/* <p class="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300">
+          {/* <p className="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum
             quam voluptatibus
           </p> */}
 
-          <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
-            <div class="p-8 space-y-3 border-2 border-purple-800 dark:border-purple-800 rounded-xl">
-              <span class="inline-block text-purple-800 dark:text-purple-800">
+          <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+            <div className="p-8 space-y-3 border-2 border-purple-800 dark:border-purple-800 rounded-xl">
+              <span className="inline-block text-purple-800 dark:text-purple-800">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="w-8 h-8"
+                  className="w-8 h-8"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -41,11 +41,11 @@ const Roadmap = () => {
                 </svg>
               </span>
 
-              <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white italic">
+              <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white italic">
                 Daily Reward
               </h1>
 
-              <p class="text-gray-500 dark:text-gray-300">
+              <p className="text-gray-500 dark:text-gray-300">
                 Holders of our NFT receive 100 CNTM daily for the next 10 years
                 and which would enables them partake in voting, redeem rewards,
                 and more being planned.
@@ -56,7 +56,7 @@ const Roadmap = () => {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="w-6 h-6"
+                  className="w-6 h-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -71,11 +71,11 @@ const Roadmap = () => {
               </Link>
             </div>
 
-            <div class="p-8 space-y-3 border-2 border-purple-800 dark:border-purple-800 rounded-xl">
-              <span class="inline-block text-purple-800 dark:text-purple-800">
+            <div className="p-8 space-y-3 border-2 border-purple-800 dark:border-purple-800 rounded-xl">
+              <span className="inline-block text-purple-800 dark:text-purple-800">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="w-8 h-8"
+                  className="w-8 h-8"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -89,11 +89,11 @@ const Roadmap = () => {
                 </svg>
               </span>
 
-              <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white italic">
+              <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white italic">
                 Exclusive Access
               </h1>
 
-              <p class="text-gray-500 dark:text-gray-300">
+              <p className="text-gray-500 dark:text-gray-300">
                 In partnership with top luxury brands in Africa, our NFT holders
                 would be rewarded with top of the line features such as one
                 night presidential stay at The Palms Hotel, Abuja.
@@ -104,7 +104,7 @@ const Roadmap = () => {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="w-6 h-6"
+                  className="w-6 h-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -119,11 +119,11 @@ const Roadmap = () => {
               </Link>
             </div>
 
-            <div class="p-8 space-y-3 border-2 border-purple-800 dark:border-purple-800 rounded-xl">
-              <span class="inline-block text-purple-800 dark:text-purple-800">
+            <div className="p-8 space-y-3 border-2 border-purple-800 dark:border-purple-800 rounded-xl">
+              <span className="inline-block text-purple-800 dark:text-purple-800">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="w-8 h-8"
+                  className="w-8 h-8"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -137,11 +137,11 @@ const Roadmap = () => {
                 </svg>
               </span>
 
-              <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white italic">
+              <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white italic">
                 Expansion
               </h1>
 
-              <p class="text-gray-500 dark:text-gray-300">
+              <p className="text-gray-500 dark:text-gray-300">
                 With more brands getting on board our platform, this would only
                 drive the demand for the NFT and bring in more users to our
                 network and to our partners
@@ -152,7 +152,7 @@ const Roadmap = () => {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="w-6 h-6"
+                  className="w-6 h-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
