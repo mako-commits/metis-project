@@ -355,12 +355,14 @@ exports.autosend= functions.pubsub.schedule('0 14 * * *').onRun((context)=>{
         exports.getAllTransactions=functions.https.onCall(async (requestData)=>{
             const walletaddress=requestData["wallet"];
         const url=`https://stardust-explorer.metis.io/api?module=account&action=txlist&address=${walletaddress}&sort=asc`;
-        ax.get(url).then(async response=>{
-            console.log(response.data);
-            var d=response.data;
-            console.log(d.result);
-            return d.result;
+        
+        const val=ax.get(url).then(async response=>{
+            const d= response.data;
+            let da={};
+             Object.assign(da, d.result);
+             return d.result;
         }).catch((error)=>console.log(error))
+        return val;
         })
 
 
