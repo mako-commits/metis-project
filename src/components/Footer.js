@@ -13,19 +13,30 @@ const Footer = () => {
               </h2>
               <nav className="list-none mb-10">
                 <li>
-                  <Link to="#" className=" text-gray-600 hover:text-gray-800">
-                    Our Github
-                  </Link>
+                  <a
+                    href="https://github.com/pythagoras-dev/metis-project"
+                    rel="noreferrer"
+                    className=" text-gray-600 hover:text-gray-800"
+                  >
+                    Github Repo
+                  </a>
                 </li>
                 <li>
-                  <Link to="#" className=" text-gray-600 hover:text-gray-800">
-                    Email: email@titanwing.com
-                  </Link>
+                  <a
+                    rel="noreferrer"
+                    href="mailto:abdulhadih48@gmail.com"
+                    className=" text-gray-600 hover:text-gray-800"
+                  >
+                    Email: abdulhadih48@gmail.com
+                  </a>
                 </li>
                 <li>
-                  <Link to="#" className=" text-gray-600 hover:text-gray-800">
-                    Telephone: 09828384942
-                  </Link>
+                  <a
+                    href="tel: 08159730537"
+                    className=" text-gray-600 hover:text-gray-800"
+                  >
+                    Telephone: 08159730537
+                  </a>
                 </li>
               </nav>
             </div>
