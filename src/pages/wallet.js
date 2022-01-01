@@ -7,7 +7,8 @@ const Wallet = () => {
   const [minted, setMinted] = useState([]);
   
   useEffect(() => {
-    window.ethereum.selectedAddress !== undefined
+    
+    window.ethereum.selectedAddress !== null 
     &&
     db.collection("minted")
       .doc(window.ethereum.selectedAddress)
@@ -25,7 +26,7 @@ const Wallet = () => {
   return (
     <>
       <DashNav />
-      <div className="bg-gray-200">
+      <div className="bg-gray-200 ">
         <div className=" mx-10 ">
           <div className=" flex flex-col items-center pt-10 mb-8">
             <div className="rounded-full bg-red-400 w-32">
@@ -46,7 +47,7 @@ const Wallet = () => {
             </h1>
 
             <main>
-              <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+              <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8 h-full">
                 <div className="px-4 py-6 sm:px-0">
                   <div className="border-4 border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center">
                     <div className="grid place-items-center p-6">
