@@ -6,6 +6,7 @@ import Accordion from "../components/Accordion";
 const Dashboard = () => {
   const [transactions, setTransactions]  = useState([]);
   const [currentIndex, setCurrentindex] = useState(5);
+  
   const add = () => {
     if (currentIndex < transactions?.length) {
       setCurrentindex(currentIndex + 5);
@@ -16,9 +17,13 @@ const Dashboard = () => {
 
   useEffect(() => {
     const magic = firebase.functions().httpsCallable('getAllTransactions')
-    magic({ wallet: window.ethereum.selectedAddress }).then(res => {
-      setTransactions(res.data)
-    })
+    const interval = setInterval( () => {
+      magic({ wallet: window.ethereum.selectedAddress }).then(res => {
+        setTransactions(res.data)
+      })
+    }, 1000);
+    return () => clearInterval(interval);
+
   },[])
 
   return (
