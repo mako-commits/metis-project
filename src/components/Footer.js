@@ -13,12 +13,14 @@ const Footer = () => {
               </h2>
               <nav className="list-none mb-10">
                 <li>
-                  <Link
-                    hash="https://github.com/pythagoras-dev/metis-project"
+                  <a
+                    href="https://github.com/pythagoras-dev/metis-project"
+                    target="_blank"
+                    rel="noreferrer"
                     className=" text-gray-600 hover:text-gray-800"
                   >
                     Our Github
-                  </Link>
+                  </a>
                 </li>
                 <li>
                   <Link to="#" className=" text-gray-600 hover:text-gray-800">
@@ -34,50 +36,6 @@ const Footer = () => {
             </div>
             <div></div>
 
-            {/* <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                CONTACT
-              </h2>
-              <nav className="list-none mb-10">
-                <li>
-                  <Link to="#" className=" text-gray-600 hover:text-gray-800">
-                    Our Github
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#" className=" text-gray-600 hover:text-gray-800">
-                    Developers
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#" className=" text-gray-600 hover:text-gray-800">
-                    Indviduals
-                  </Link>
-                </li>
-              </nav>
-            </div> */}
-            {/* <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                DEVELOPERS
-              </h2>
-              <nav className="list-none mb-10">
-                <li>
-                  <Link to="#" className=" text-gray-600 hover:text-gray-800">
-                    Fork on Github
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#" className=" text-gray-600 hover:text-gray-800">
-                    Documentation
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#" className=" text-gray-600 hover:text-gray-800">
-                    Community Docs
-                  </Link>
-                </li>
-              </nav>
-            </div> */}
             <div className="lg:w-1/2 md:w-1/2 w-full px-1">
               <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3 flex justify-center items-end md:justify-start">
                 SUBSCRIBE

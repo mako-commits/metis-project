@@ -30,7 +30,7 @@ const Dashboard = () => {
                       width="40"
                       fill="currentColor"
                       height="40"
-                      class="text-purple-500 h-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                      className="text-purple-500 h-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                       viewBox="0 0 1792 1792"
                       xmlns="http://www.w3.org/2000/svg"
                     >
@@ -71,7 +71,7 @@ const Dashboard = () => {
                       width="40"
                       fill="currentColor"
                       height="40"
-                      class="text-purple-500 h-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                      className="text-purple-500 h-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                       viewBox="0 0 1792 1792"
                       xmlns="http://www.w3.org/2000/svg"
                     >
@@ -112,7 +112,7 @@ const Dashboard = () => {
                       width="40"
                       fill="currentColor"
                       height="40"
-                      class="text-purple-500 h-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                      className="text-purple-500 h-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                       viewBox="0 0 1792 1792"
                       xmlns="http://www.w3.org/2000/svg"
                     >
@@ -258,7 +258,7 @@ const Dashboard = () => {
                   <div className="flex items-center w-full justify-between">
                     <div className="flex text-sm flex-col w-full ml-2 items-start justify-between">
                       <p className="text-gray-700 dark:text-white">
-                        <span class="font-bold mr-1">Andrea</span>
+                        <span className="font-bold mr-1">Andrea</span>
                         I'll like this item
                       </p>
                       <p className="text-gray-300">Aug 10</p>
@@ -323,7 +323,7 @@ const Dashboard = () => {
                   </span>
                   <div className="flex items-center w-full justify-between">
                     <div className="flex text-sm flex-col w-full ml-2 items-start justify-between">
-                      <p class="text-gray-700 dark:text-white">
+                      <p className="text-gray-700 dark:text-white">
                         <span className="font-bold mr-1">John</span>I want this
                         item
                       </p>
