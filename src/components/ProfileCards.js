@@ -11,7 +11,7 @@ const ProfileCards = () => {
       image: "./hadi.jpeg",
     },
     {
-      name: "Mohammed-Nabil Alamin",
+      name: "Nabil Alamin",
       role: "Assistant Lead Developer",
       github: "https://github.com/arndom",
       discord: "https://discord.gg/yfynxwH7",

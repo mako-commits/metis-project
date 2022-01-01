@@ -17,19 +17,19 @@ const About = (props) => {
         </p>
 
         <p className="text-base leading-8 py-4">
-          Abdul-Hadi Hashim who brougth the team together is the CEO of Soft AI.
+          Abdul-Hadi Hashim who brought the team together is the CEO of Soft AI.
           He has worked on Climate change projects spreading across west Africa
-          and recently gave a talk in Dubai where I spoke about my journey to
-          cryptoCurrency, I have won multiple international awards and
+          and recently gave a talk in Dubai where he spoke about hsi journey to
+          cryptoCurrency, He has won multiple international awards and
           recognitions.
         </p>
         <p className="text-base leading-8 py-4">
-          Mohammed-Nabil Alamin is the Co-founder of nft startup "nftinder".He
-          has won multiple international competition and hackathons including
+          Nabil Alamin is co-founder of nft startup; nftinder. He
+          has won multiple international competitions and hackathons including the
           recent github actions hackathon.
         </p>
         <p className="text-base leading-8 py-4">
-          Mustapha Mubarak a frontend developer. He loves to code and design
+          Mustapha Mubarak is a frontend developer. He loves to code and design
           websites. He's a data analytics and AI programmming enthusiast.
         </p>
       </div>
