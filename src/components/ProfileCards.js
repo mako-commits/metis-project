@@ -7,7 +7,7 @@ const ProfileCards = () => {
       role: "Lead Developer",
       github: "https://www.linkedin.com/in/abdul-hadi-hashim-629960142/",
       discord: "https://discord.gg/yfynxwH7",
-      mail: "mailto:reconstr.dev@gmail.com",
+      mail: "mailto:abdulhadih48@gmail.com",
       image: "./hadi.jpeg",
     },
     {
@@ -15,9 +15,9 @@ const ProfileCards = () => {
       role: "Assistant Lead Developer",
       github: "https://github.com/arndom",
       discord: "https://discord.gg/yfynxwH7",
-      mail: "mailto:abdulhadih48@gmail.com",
+      mail: "mailto:reconstr.dev@gmail.com",
       image:
-        "https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+        "https://images.unsplash.com/photo-1583123810408-23e7b5d1af9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjBndXl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
     },
     {
       name: "Mustapha Mubarak",
