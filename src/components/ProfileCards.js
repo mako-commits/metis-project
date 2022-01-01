@@ -6,7 +6,7 @@ const ProfileCards = () => {
       name: "Abdul-Hadi Hashim",
       role: "Lead Developer",
       github: "https://www.linkedin.com/in/abdul-hadi-hashim-629960142/",
-      discord: "another_User#0835",
+      discord: "https://discord.gg/yfynxwH7",
       mail: "mailto:reconstr.dev@gmail.com",
       image: "./hadi.jpeg",
     },
@@ -14,7 +14,7 @@ const ProfileCards = () => {
       name: "Mohammed-Nabil Alamin",
       role: "Assistant Lead Developer",
       github: "https://github.com/arndom",
-      discord: "arndom...#4646",
+      discord: "https://discord.gg/yfynxwH7",
       mail: "mailto:abdulhadih48@gmail.com",
       image:
         "https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
@@ -23,7 +23,7 @@ const ProfileCards = () => {
       name: "Mustapha Mubarak",
       role: "Frontend Developer",
       github: "https://github.com/pythagoras-dev/",
-      discord: "mako#4375",
+      discord: "https://discord.gg/yfynxwH7",
       mail: "mailto:mk.dev.xv@gmail.com",
       image:
         "https://mk-portfolio.vercel.app/static/media/profile.ddb16057.jpg",
