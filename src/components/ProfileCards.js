@@ -8,8 +8,7 @@ const ProfileCards = () => {
       github: "https://www.linkedin.com/in/abdul-hadi-hashim-629960142/",
       discord: "another_User#0835",
       mail: "mailto:reconstr.dev@gmail.com",
-      image:
-        "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+      image: "./hadi.jpeg",
     },
     {
       name: "Mohammed-Nabil Alamin",
@@ -27,7 +26,7 @@ const ProfileCards = () => {
       discord: "mako#4375",
       mail: "mailto:mk.dev.xv@gmail.com",
       image:
-        "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+        "https://mk-portfolio.vercel.app/static/media/profile.ddb16057.jpg",
     },
   ];
   return (
@@ -39,7 +38,7 @@ const ProfileCards = () => {
               <img
                 class="object-cover w-full rounded-xl aspect-square"
                 src={team.image}
-                alt=""
+                alt="team"
               />
 
               <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white">
