@@ -13,10 +13,7 @@ const Footer = () => {
               </h2>
               <nav className="list-none mb-10">
                 <li>
-                  <Link
-                    hash="https://github.com/pythagoras-dev/metis-project"
-                    className=" text-gray-600 hover:text-gray-800"
-                  >
+                  <Link to="#" className=" text-gray-600 hover:text-gray-800">
                     Our Github
                   </Link>
                 </li>
