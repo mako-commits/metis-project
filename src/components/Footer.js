@@ -7,36 +7,41 @@ const Footer = () => {
       <footer className=" body-font bg-gray-100">
         <div className="container px-5 py-20 mx-auto">
           <div className="flex flex-wrap md:text-left text-center order-first">
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+            <div className="lg:w-1/2 md:w-1/2 w-full px-4">
               <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                CATEGORIES
+                CONTACT
               </h2>
               <nav className="list-none mb-10">
                 <li>
-                  <Link to="#" className=" text-gray-600 hover:text-gray-800">
-                    Blog
+                  <Link
+                    hash="https://github.com/pythagoras-dev/metis-project"
+                    className=" text-gray-600 hover:text-gray-800"
+                  >
+                    Our Github
                   </Link>
                 </li>
                 <li>
                   <Link to="#" className=" text-gray-600 hover:text-gray-800">
-                    Events
+                    Email: email@titanwing.com
                   </Link>
                 </li>
                 <li>
                   <Link to="#" className=" text-gray-600 hover:text-gray-800">
-                    Community
+                    Telephone: 09828384942
                   </Link>
                 </li>
               </nav>
             </div>
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+            <div></div>
+
+            {/* <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                LEARN
+                CONTACT
               </h2>
               <nav className="list-none mb-10">
                 <li>
                   <Link to="#" className=" text-gray-600 hover:text-gray-800">
-                    Creators
+                    Our Github
                   </Link>
                 </li>
                 <li>
@@ -50,8 +55,8 @@ const Footer = () => {
                   </Link>
                 </li>
               </nav>
-            </div>
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+            </div> */}
+            {/* <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
                 DEVELOPERS
               </h2>
@@ -72,15 +77,25 @@ const Footer = () => {
                   </Link>
                 </li>
               </nav>
-            </div>
-            <div className="lg:w-1/4 md:w-1/2 w-full px-1">
+            </div> */}
+            <div className="lg:w-1/2 md:w-1/2 w-full px-1">
               <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3 flex justify-center items-end md:justify-start">
                 SUBSCRIBE
               </h2>
-              <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-end">
-                <div className="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
+              <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap justify-center items-end md:justify-start">
+                <div className="relative w-2/3 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
                   <input
+                    placeholder="Name"
                     type="text"
+                    id="footer-field"
+                    name="footer-field"
+                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-blue-200 focus:border-purple-400 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  />
+                </div>
+                <div className="relative w-2/3 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
+                  <input
+                    placeholder="Email"
+                    type="email"
                     id="footer-field"
                     name="footer-field"
                     className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-blue-200 focus:border-purple-400 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
@@ -99,7 +114,12 @@ const Footer = () => {
               to="#"
               className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
             >
-              <span className="ml-3 text-xl flex items-baseline">TitanWing <p className="pl-2 text-blue-500 text-xs not-italic font-medium tracking-wider">BETA</p></span>
+              <span className="ml-3 text-xl flex items-baseline">
+                TitanWing{" "}
+                <p className="pl-2 text-blue-500 text-xs not-italic font-medium tracking-wider">
+                  BETA
+                </p>
+              </span>
             </Link>
 
             <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">

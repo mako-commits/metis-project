@@ -4,18 +4,34 @@ import DashNav from "../../components/DashNav";
 const Offer = () => {
   const people = [
     {
-      name: "Jane Cooper",
+      name: "The Hive Restaurant",
       message: "Yo!.........I would like this piece",
-      offer: "46 BTC",
+      offer: "10% off drinks for 300 CNTM every Wednesday",
       email: "jane.cooper@example.com",
       image:
         "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
     },
     {
-      name: "Some dude",
+      name: "The palms Hotel",
       message: "I want this item",
-      offer: "96 ETH",
+      offer: " 15% off on weekends for 500 CNTM",
       email: "some.dude@example.com",
+      image:
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
+    {
+      name: "Baccd Resort",
+      message: "I want this item",
+      offer: "75 CNTM for each referral",
+      email: "baccdresort@example.com",
+      image:
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
+    {
+      name: "Ekpoma Mall",
+      message: "I want this item",
+      offer: "Valley parking for 600 CNTM",
+      email: "ekoomamall@example.com",
       image:
         "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     },
@@ -37,12 +53,12 @@ const Offer = () => {
                       >
                         Name
                       </th>
-                      <th
+                      {/* <th
                         scope="col"
                         className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                       >
                         Message
-                      </th>
+                      </th> */}
                       <th
                         scope="col"
                         className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
@@ -79,11 +95,11 @@ const Offer = () => {
                             </div>
                           </div>
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
+                        {/* <td className="px-6 py-4 whitespace-nowrap">
                           <div className="text-sm text-gray-900">
                             {person.message}
                           </div>
-                        </td>
+                        </td> */}
                         <td className="px-6 py-4 whitespace-nowrap">
                           <div className="text-sm text-gray-500">
                             {person.offer}

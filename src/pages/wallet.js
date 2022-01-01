@@ -7,6 +7,8 @@ const Wallet = () => {
   const [minted, setMinted] = useState([]);
   
   useEffect(() => {
+    window.ethereum.selectedAddress !== undefined
+    &&
     db.collection("minted")
       .doc(window.ethereum.selectedAddress)
       .onSnapshot( snapshot => {

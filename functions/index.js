@@ -28,7 +28,7 @@ exports.autosend= functions.pubsub.schedule('0 14 * * *').onRun((context)=>{
     const web3 = new web3_1(new web3_1 .providers.HttpProvider("https://stardust.metis.io/?owner=588"));
     
         const contractAddress = '0x1ed87e4b0d15b70434e82a06c5fcd7015b5f8d6a'; //Yor token contract address
-        const privateKey = 'c098aaf163fdfeba6a040b9aafe70950e896ac4bab64034dd6be16812735a845'; //The private key of your contract Owner  
+        const privateKey = functions.config().someservice.key; //The private key of your contract Owner  
         const receiver=requestData;
         // const receiver = '0xDc60770f0d8e9EB203bD04659eBBC1542CFE1177'; //The address to transfer the tokens    
         const ownerAddress = '0xAdf1618568e49fB32F78BE41B181C9358777A098';
