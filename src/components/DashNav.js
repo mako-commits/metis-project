@@ -41,9 +41,7 @@ export default function DashNav() {
                         </p>
                       </h1>
                     </Link>
-                    <div className="flex-shrink-0 text-white ">
-                      <h1>Dashboard</h1>
-                    </div>
+
                     <div className="hidden md:block">
                       <div className="ml-10 flex items-baseline space-x-4">
                         {navigation.map((item) => (

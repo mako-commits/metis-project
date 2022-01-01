@@ -125,8 +125,7 @@ const ArtCard = ({ image, name, attributes, edition, dna}) => {
                   }) 
                 }
             </div>
-
-              {connected ? (
+              {window.location.pathname !== '/wallet' && (connected ? (
                 <button 
                 className="cursor-pointer text-white bg-purple-800 border-0 py-2 px-4 m-auto rounded "
                 onClick={mint}
@@ -140,7 +139,7 @@ const ArtCard = ({ image, name, attributes, edition, dna}) => {
                 >
                   Connect Wallet
                 </p>
-              )}
+              ))}
           </div>
         </div>
       </Modal>
