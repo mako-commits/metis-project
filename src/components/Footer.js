@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert(`Your state values: \n 
+            email: ${email} \n
+            name:${name}\n
+            Thank you`);
+  };
   return (
     <>
       <footer className=" body-font bg-gray-100">
@@ -19,18 +35,25 @@ const Footer = () => {
                     rel="noreferrer"
                     className=" text-gray-600 hover:text-gray-800"
                   >
-                    Our Github
+                    Github Repo
                   </a>
                 </li>
                 <li>
-                  <Link to="#" className=" text-gray-600 hover:text-gray-800">
-                    Email: email@titanwing.com
-                  </Link>
+                  <a
+                    rel="noreferrer"
+                    href="mailto:abdulhadih48@gmail.com"
+                    className=" text-gray-600 hover:text-gray-800"
+                  >
+                    Email: abdulhadih48@gmail.com
+                  </a>
                 </li>
                 <li>
-                  <Link to="#" className=" text-gray-600 hover:text-gray-800">
-                    Telephone: 09828384942
-                  </Link>
+                  <a
+                    href="tel: 08159730537"
+                    className=" text-gray-600 hover:text-gray-800"
+                  >
+                    Telephone: 08159730537
+                  </a>
                 </li>
               </nav>
             </div>
@@ -40,29 +63,38 @@ const Footer = () => {
               <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3 flex justify-center items-end md:justify-start">
                 SUBSCRIBE
               </h2>
-              <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap justify-center items-end md:justify-start">
-                <div className="relative w-2/3 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
-                  <input
-                    placeholder="Name"
-                    type="text"
-                    id="footer-field"
-                    name="footer-field"
-                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-blue-200 focus:border-purple-400 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                  />
+              <form onSubmit={handleSubmit}>
+                <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap justify-center items-end md:justify-start">
+                  <div className="relative w-2/3 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
+                    <input
+                      value={name}
+                      onChange={handleNameChange}
+                      placeholder="Name"
+                      type="text"
+                      id="footer-field"
+                      name="footer-field"
+                      className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-blue-200 focus:border-purple-400 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    />
+                  </div>
+                  <div className="relative w-2/3 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
+                    <input
+                      value={email}
+                      onChange={handleEmailChange}
+                      placeholder="Email"
+                      type="email"
+                      id="footer-field"
+                      name="footer-field"
+                      className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-blue-200 focus:border-purple-400 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-purple-800 border-0 py-2 px-6 focus:outline-none hover:bg-purple-400 rounded"
+                  >
+                    Sign Up
+                  </button>
                 </div>
-                <div className="relative w-2/3 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
-                  <input
-                    placeholder="Email"
-                    type="email"
-                    id="footer-field"
-                    name="footer-field"
-                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-blue-200 focus:border-purple-400 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                  />
-                </div>
-                <button className="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-purple-800 border-0 py-2 px-6 focus:outline-none hover:bg-purple-400 rounded">
-                  Sign Up
-                </button>
-              </div>
+              </form>
             </div>
           </div>
         </div>

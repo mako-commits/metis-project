@@ -11,6 +11,7 @@ import Dashboard from "./pages/dashboard";
 import History from "./pages/views/history";
 import Home from "./pages";
 import Offer from "./pages/views/offer";
+import NotFound from "./pages/NotFound";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -32,8 +33,6 @@ function App() {
   return (
     <>
       <Router>
-        {/* <Navbar toggle={toggle} />
-        <Dropdown isOpen={isOpen} toggle={toggle} /> */}
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -43,10 +42,10 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/history" element={<History />} />
           <Route path="/offer" element={<Offer />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </Router>
-      <Router></Router>
     </>
   );
 }

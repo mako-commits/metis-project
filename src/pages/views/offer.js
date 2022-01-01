@@ -7,33 +7,33 @@ const Offer = () => {
       name: "The Hive Restaurant",
       message: "Yo!.........I would like this piece",
       offer: "10% off drinks for 300 CNTM every Wednesday",
-      email: "jane.cooper@example.com",
+      email: "hi@hiverestaurant.com",
       image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+        "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmVzdGF1cmFudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
     },
     {
-      name: "The palms Hotel",
+      name: "The Palms Hotel",
       message: "I want this item",
       offer: " 15% off on weekends for 500 CNTM",
-      email: "some.dude@example.com",
+      email: "contact@palmshotel.com",
       image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        "https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGhvdGVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     },
     {
       name: "Baccd Resort",
       message: "I want this item",
       offer: "75 CNTM for each referral",
-      email: "baccdresort@example.com",
+      email: "info@baccdresort.com",
       image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aG90ZWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
     },
     {
       name: "Ekpoma Mall",
       message: "I want this item",
       offer: "Valley parking for 600 CNTM",
-      email: "ekoomamall@example.com",
+      email: "hello@ekoomamall.com",
       image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        "https://media.istockphoto.com/photos/busy-shopping-mall-picture-id181996772?b=1&k=20&m=181996772&s=170667a&w=0&h=pbqpxTmkQgXm2STifeoshuGzQFrzyECtOFkKeSUC8TA=",
     },
   ];
   return (

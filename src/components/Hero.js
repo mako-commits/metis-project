@@ -22,9 +22,9 @@ const Hero = () => {
               not something you want to miss out on
             </p>
             <div className="flex justify-center">
-              <button className="bg-purple-800 hover:bg-purple-400 transition duration-300 ease-in-out py-3 px-5 text-white rounded-md mt-4">
+              {/* <button className="bg-purple-800 hover:bg-purple-400 transition duration-300 ease-in-out py-3 px-5 text-white rounded-md mt-4">
                 Join our Community
-              </button>
+              </button>  */}
             </div>
           </div>
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">

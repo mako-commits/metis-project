@@ -1,40 +1,40 @@
 import React from "react";
-import Cards from "../components/Cards";
 import Navbar from "../components/Navbar";
 import Dropdown from "../components/Dropdown";
+import ProfileCards from "../components/ProfileCards";
 
 const About = (props) => {
   return (
     <>
       <Navbar toggle={props.toggle} />
       <Dropdown isOpen={props.isOpen} toggle={props.toggle} />
-      <div className="container mx-auto flex flex-col justify-center items-center lg:w-10/12 w-4/5">
+      <div className="container mx-auto flex flex-col justify-center md:justify-start  md:items-start lg:w-10/12 w-4/5">
         <h1 className="lg:text-4xl text-xl italic uppercase font-black mt-7">
           The team
         </h1>
         <p className="text-base leading-8 py-4">
-          The Core Team is comprised of Maria and Aleksey. They have been
-          working together for many years creating 3d characters and animation
-          for tv commercials and various other mediums.
+          The Core Team is comprised of 3 developers.
         </p>
-        {/* <p className="text-base leading-8 py-4">You can check out our work at https://ace5studios.com</p> */}
 
         <p className="text-base leading-8 py-4">
-          Another User have been at this for like 16 years. Between the 2 of us
-          we have a tonne of experience. We’ve also been running a successful
-          online shop selling 3d character assets for people to use in their own
-          projects.
+          Abdul-Hadi Hashim who brougth the team together is the CEO of Soft AI.
+          He has worked on Climate change projects spreading across west Africa
+          and recently gave a talk in Dubai where I spoke about my journey to
+          cryptoCurrency, I have won multiple international awards and
+          recognitions.
         </p>
         <p className="text-base leading-8 py-4">
-          Igor is a shadowy dev who doesn’t particularly enjoy social
-          interaction, he was poached from Citi group, and forced to learn
-          solana blockchain. He’s doing pretty damn well. First thing he did was
-          wrote his own block chain in python between his home computers. He’s
-          the kinda guy who likes to figure out how everything works from the
-          ground up.
+          Mohammed-Nabil Alamin is the Co-founder of nft startup "nftinder".He
+          has won multiple international competition and hackathons including
+          recent github actions hackathon.
+        </p>
+        <p className="text-base leading-8 py-4">
+          Mustapha Mubarak a frontend developer. He loves to code and design
+          websites. He's a data analytics and AI programmming enthusiast.
         </p>
       </div>
-      <Cards />
+
+      <ProfileCards />
     </>
   );
 };
