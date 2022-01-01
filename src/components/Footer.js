@@ -14,8 +14,9 @@ const Footer = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     alert(`Your state values: \n 
-            email: ${email} \n 
-            You can replace this alert with your process`);
+            email: ${email} \n
+            name:${name}\n
+            Thank you`);
   };
   return (
     <>
@@ -34,7 +35,7 @@ const Footer = () => {
                     rel="noreferrer"
                     className=" text-gray-600 hover:text-gray-800"
                   >
-                    Our Github
+                    Github Repo
                   </a>
                 </li>
                 <li>
