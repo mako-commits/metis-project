@@ -11,6 +11,7 @@ import Dashboard from "./pages/dashboard";
 import History from "./pages/views/history";
 import Home from "./pages";
 import Offer from "./pages/views/offer";
+import NotFound from "./pages/NotFound";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -43,6 +44,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/history" element={<History />} />
           <Route path="/offer" element={<Offer />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </Router>
