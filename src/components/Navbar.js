@@ -88,12 +88,21 @@ const Navbar = ({ toggle }) => {
             Connect Wallet
           </p>
         )}
-
-        {connected && (
-          <Link to="/wallet" className="p-4 text-indigo-500 font-semibold">
-            Me
-          </Link>
-        )}
+        {/* {console.log(window.ethereum.selectedAddress)} */}
+       { window.ethereum.selectedAddress == 0x8C12d017B5441c735050D13d034e19d459Ebd33a || window.ethereum.selectedAddress == 0xfcCd950FA8cBd332634BcC57809A8a9A0496D4B6
+          ?
+          connected && (
+            <Link to="/restoffer" className="p-4 text-indigo-500 font-semibold">
+              Me
+            </Link>
+          )
+          :
+          connected && (
+            <Link to="/wallet" className="p-4 text-indigo-500 font-semibold">
+              Me
+            </Link>
+          )
+        }
       </div>
     </div>
   );

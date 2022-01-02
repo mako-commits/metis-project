@@ -11,7 +11,7 @@ const RestOffer = (props) => {
   //get offers from firebase
   useEffect(() => {
     db.collection("Businesses")
-      .doc("0xfcCd950FA8cBd332634BcC57809A8a9A0496D4B6")
+      .doc(window.ethereum.selectedAddress)
       .collection("deals")
       .onSnapshot((snapshot) => {
         let dna = snapshot.docs.map((offer) => offer.data());
@@ -22,7 +22,7 @@ const RestOffer = (props) => {
   //get offer ids
   useEffect(() => {
     db.collection("Businesses")
-    .doc("0xfcCd950FA8cBd332634BcC57809A8a9A0496D4B6")
+    .doc(window.ethereum.selectedAddress)
     .collection("deals")
     .onSnapshot((images) => {
       setIds(images.docs.map((image) => image.id));
@@ -31,7 +31,7 @@ const RestOffer = (props) => {
 
   const onDeleteOffer = (index) => {    
     db.collection("Businesses")
-      .doc("0xfcCd950FA8cBd332634BcC57809A8a9A0496D4B6")
+      .doc(window.ethereum.selectedAddress)
       .collection("deals")
       .doc(ids[index])
       .delete()

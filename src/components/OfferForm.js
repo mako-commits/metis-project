@@ -21,7 +21,7 @@ const OfferForm = (props) => {
 
     //add offer to firebase
     db.collection("Businesses")
-    .doc("0xfcCd950FA8cBd332634BcC57809A8a9A0496D4B6")
+    .doc(window.ethereum.selectedAddress)
     .collection("deals")
     .add({
       info: enteredOffer,
