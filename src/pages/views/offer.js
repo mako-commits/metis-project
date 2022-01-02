@@ -47,7 +47,6 @@ const Offer = () => {
   return (
     <>
       <DashNav />
-      {console.log(displayData)}
       <main className="bg-gray-400">
         <div className=" max-w-7xl mx-auto py-6 sm:px-6 lg:px-8 flex flex-col ">
           <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
