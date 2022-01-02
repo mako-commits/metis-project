@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+# The Continium Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Demo usage:
+1. Download 'metamask' browser extension
+2. refer to the table below and import any of  the following wallets to use:
 
-## Available Scripts
+| Type        | Wallet Address           | private Key  |
+| ------------- |:-------------:| -----:|
+| Restaurant      | 0xfcCd950FA8cBd332634BcC57809A8a9A0496D4B6 | dc0db212f3216d767f20b5a81703603d6cf4c5d6022558644fa4fd13925c4901 |
+| Hotel      | 0x8C12d017B5441c735050D13d034e19d459Ebd33a      |   12d47ec47a0accdb13c977d21d5f04213eb33b27d2ef85ba032d0c558b152418 |
+| customer 1 | 0xd47bDDD84D838784BCC5EB133f769D368708b467     |    86e6acbafabc1e8b29edc329e5a8ac02e771f2537f3c35e1aa9b9513888e5990 |
 
-In the project directory, you can run:
+### contract addresses
 
-### `npm start`
+| Type        | Contract Address           | Name |
+| ------------- |:-------------:| -----:|
+| ERC20 Token      | 0xA3a31CB196b9edF0Ac5a1A79164ccbaf364896c6 | CNTM |
+| ERC721 NFT      | 0x31bb1dbE05aE866024FF9a351fe16f10c8F26bcD      | TITAN |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## What you can do with it
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**As a business** that operates in African Hospitality market, you can sign up to our platfrom and our uses who have a limited collection of NFTs and our CNTM erc-20 token would be eligilbe for discounts, complimentary services, etc at your locations, therefore drawing more users to your business.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**As a user** you get access to exclusive features at any of the locations within the network, referall bonuses(coming soon), discounts, governance rights(coming soon).
