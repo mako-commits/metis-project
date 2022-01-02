@@ -16,8 +16,7 @@ const ProfileCards = () => {
       github: "https://github.com/arndom",
       discord: "https://discord.gg/yfynxwH7",
       mail: "mailto:reconstr.dev@gmail.com",
-      image:
-        "https://images.unsplash.com/photo-1583123810408-23e7b5d1af9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjBndXl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      image: "./nabil.jpg",
     },
     {
       name: "Mustapha Mubarak",
@@ -25,8 +24,7 @@ const ProfileCards = () => {
       github: "https://github.com/pythagoras-dev/",
       discord: "https://discord.gg/yfynxwH7",
       mail: "mailto:mk.dev.xv@gmail.com",
-      image:
-        "https://mk-portfolio.vercel.app/static/media/profile.ddb16057.jpg",
+      image: "./mubby.jpg",
     },
   ];
   return (
