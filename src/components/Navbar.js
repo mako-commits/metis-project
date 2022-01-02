@@ -89,6 +89,7 @@ const Navbar = ({ toggle }) => {
           </p>
         )}
         {/* {console.log(window.ethereum.selectedAddress)} */}
+        {/* eslint-disable-next-line */}
        { window.ethereum.selectedAddress == 0x8C12d017B5441c735050D13d034e19d459Ebd33a || window.ethereum.selectedAddress == 0xfcCd950FA8cBd332634BcC57809A8a9A0496D4B6
           ?
           connected && (
