@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import DashNav from "../../components/DashNav";
 
 const Offer = () => {
+  const [balance, setBalance] = useState("0");
+
   const people = [
     {
       name: "The Hive Restaurant",
@@ -36,6 +38,9 @@ const Offer = () => {
         "https://media.istockphoto.com/photos/busy-shopping-mall-picture-id181996772?b=1&k=20&m=181996772&s=170667a&w=0&h=pbqpxTmkQgXm2STifeoshuGzQFrzyECtOFkKeSUC8TA=",
     },
   ];
+  const onAddFunds = () => {
+    setBalance(100);
+  };
   return (
     <>
       <DashNav />
@@ -43,6 +48,16 @@ const Offer = () => {
         <div className=" max-w-7xl mx-auto py-6 sm:px-6 lg:px-8 flex flex-col ">
           <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+              <div className="mb-5">
+                <h1>Current balance: {balance}</h1>
+                <button
+                  onClick={onAddFunds}
+                  className="lg:mt-2 xl:mt-0 mr-2 flex-shrink-0 inline-flex text-white bg-green-800 border-0 py-2 px-6 focus:outline-none hover:bg-green-400 rounded"
+                >
+                  Add funds
+                </button>
+              </div>
+
               <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                 <table className="min-w-full divide-y divide-gray-200">
                   <thead className="bg-gray-50">
@@ -105,13 +120,17 @@ const Offer = () => {
                             {person.offer}
                           </div>
                         </td>
+
                         <td className="px-2 py-4 whitespace-nowrap text-sm text-gray-500">
-                          <button className="lg:mt-2 xl:mt-0 mr-2 flex-shrink-0 inline-flex text-white bg-green-800 border-0 py-2 px-6 focus:outline-none hover:bg-green-400 rounded">
-                            Accept
-                          </button>
-                          <button className="lg:mt-2 xl:mt-0 ml-2 flex-shrink-0 inline-flex text-white bg-red-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-400 rounded">
-                            Reject
-                          </button>
+                          {balance > 0 ? (
+                            <button className="lg:mt-2 xl:mt-0 mr-2 flex-shrink-0 inline-flex text-white bg-green-800 border-0 py-2 px-6 focus:outline-none hover:bg-green-400 rounded">
+                              Redeem
+                            </button>
+                          ) : (
+                            <button className="cursor-not-allowed lg:mt-2 xl:mt-0 ml-2 flex-shrink-0 inline-flex text-white bg-red-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-400 rounded">
+                              Insufficient funds
+                            </button>
+                          )}
                         </td>
                       </tr>
                     ))}
