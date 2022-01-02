@@ -28,9 +28,9 @@ const DUMMY_OFFERS = [
 const RestOffer = (props) => {
   const [offers, setOffers] = useState(DUMMY_OFFERS);
 
-  const onDeleteOffer = (offerId) => {
+  const onDeleteOffer = (id) => {
     const newOffer = [...offers];
-    const index = offers.findIndex((offer) => offer.id === offerId);
+    const index = offers.findIndex((offer) => offer.id === id);
     newOffer.splice(index, 1);
     setOffers(newOffer);
   };
