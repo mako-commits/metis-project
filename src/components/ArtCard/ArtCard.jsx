@@ -44,6 +44,8 @@ const ArtCard = ({ image, name, attributes, edition, dna}) => {
   //calculate reward
   useEffect(() => {
       let _rarity = [];
+      
+    // eslint-disable-next-line
       attributes?.map((trait, index) => {
         const traitValue = rarity[trait.trait_type].filter((item) => item.trait === trait.value )[0].occurrence.slice(-7, -2) 
         _rarity.push(Number(traitValue))
@@ -53,7 +55,7 @@ const ArtCard = ({ image, name, attributes, edition, dna}) => {
       let _rewardVal = rewards.filter( (reward) => rareVal >= reward.min && rareVal <= reward.max )
       setRewardValue(_rewardVal[0].reward)
 
-  },[])
+  },[attributes])
 
   const mint = () =>{
     mintLogic.prepURI(edition, dna)
