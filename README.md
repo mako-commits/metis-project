@@ -15,7 +15,7 @@
 | Type        | Contract Address           | Name |
 | ------------- |:-------------:| -----:|
 | ERC20 Token      | 0xA3a31CB196b9edF0Ac5a1A79164ccbaf364896c6 | CNTM |
-| ERC721 NFT      | 0x31bb1dbE05aE866024FF9a351fe16f10c8F26bcD      | TITAN |
+| ERC721 NFT      | 0x31bb1dbE05aE866024FF9a351fe16f10c8F26bcD      | BMNT |
 
 
 
