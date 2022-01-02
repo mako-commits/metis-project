@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import DashNav from "../../components/DashNav";
 import NewOffer from "../../components/NewOffer";
-import OfferForm from "../../components/OfferForm";
 import OfferItem from "../../components/OfferItem";
 const DUMMY_OFFERS = [
   {
@@ -11,15 +10,16 @@ const DUMMY_OFFERS = [
   },
   {
     id: "OF2",
-
     offer: " 15% off on weekends for 500 CNTM",
     value: 500,
   },
   {
+    id: "OF3",
     offer: "75 CNTM for each referral",
     value: 75,
   },
   {
+    id: "OF4",
     offer: "Valley parking for 600 CNTM",
     value: 600,
   },
