@@ -41,6 +41,10 @@ const Offer = () => {
   const onAddFunds = () => {
     setBalance(100);
   };
+  const onRedeem = (event) => {
+    event.preventDefault();
+    alert("Congrats you just redeemed offf");
+  };
   return (
     <>
       <DashNav />
@@ -123,7 +127,10 @@ const Offer = () => {
 
                         <td className="px-2 py-4 whitespace-nowrap text-sm text-gray-500">
                           {balance > 0 ? (
-                            <button className="lg:mt-2 xl:mt-0 mr-2 flex-shrink-0 inline-flex text-white bg-green-800 border-0 py-2 px-6 focus:outline-none hover:bg-green-400 rounded">
+                            <button
+                              onClick={onRedeem}
+                              className="lg:mt-2 xl:mt-0 mr-2 flex-shrink-0 inline-flex text-white bg-green-800 border-0 py-2 px-6 focus:outline-none hover:bg-green-400 rounded"
+                            >
                               Redeem
                             </button>
                           ) : (
