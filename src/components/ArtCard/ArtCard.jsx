@@ -5,12 +5,13 @@ import { ethers } from "ethers";
 import { rarity } from '../../constants/rarity'
 import { isMetaMaskInstalled, tryMetaMaskConnect } from "../../constants/walletLogic";
 import { mintLogic } from "../../constants/mintLogic";
+import { rewards } from '../../constants/rewards';
 
 Modal.setAppElement("#root");
 const ArtCard = ({ image, name, attributes, edition, dna}) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
- 
   const [connected, setConnected] = useState(false);
+  const [rewardValue, setRewardValue] = useState("")
 
   const isMetaMaskConnected = async () => {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -40,11 +41,25 @@ const ArtCard = ({ image, name, attributes, edition, dna}) => {
     // eslint-disable-next-line
   }, []);
 
+  //calculate reward
+  useEffect(() => {
+      let _rarity = [];
+      attributes?.map((trait, index) => {
+        const traitValue = rarity[trait.trait_type].filter((item) => item.trait === trait.value )[0].occurrence.slice(-7, -2) 
+        _rarity.push(Number(traitValue))
+      })
+
+      const rareVal = Math.min(..._rarity)
+      let _rewardVal = rewards.filter( (reward) => rareVal >= reward.min && rareVal <= reward.max )
+      setRewardValue(_rewardVal[0].reward)
+
+  },[])
+
   const mint = () =>{
-    // alert("mint")
-    // alert(edition)
     mintLogic.prepURI(edition, dna)
   }
+
+
   return (
     <>
       <div
@@ -80,24 +95,35 @@ const ArtCard = ({ image, name, attributes, edition, dna}) => {
           },
         }}
       >
-        <div className="popup-close-btn">
-          <button
-            onClick={() => setModalIsOpen(false)}
-            className="px-5 py-3 rounded-md"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              fill="currentColor"
-              className="h-6 w-6 text-red-700"
-              viewBox="0 0 1792 1792"
+
+        {/**
+         * TOP OF MODAL
+         * **/}
+        <div className="flex items-center justify-center">
+          <p className="flex-1 flex justify-center pl-12 my-5 animate-bounce">🔽{rewardValue}🔽</p>
+
+          <div className="popup-close-btn">
+            <button
+              onClick={() => setModalIsOpen(false)}
+              className="py-3 rounded-m"
             >
-              <path d="M1490 1322q0 40-28 68l-136 136q-28 28-68 28t-68-28l-294-294-294 294q-28 28-68 28t-68-28l-136-136q-28-28-28-68t28-68l294-294-294-294q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 294 294-294q28-28 68-28t68 28l136 136q28 28 28 68t-28 68l-294 294 294 294q28 28 28 68z"></path>
-            </svg>
-          </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                className="h-6 w-6 text-red-700"
+                viewBox="0 0 1792 1792"
+              >
+                <path d="M1490 1322q0 40-28 68l-136 136q-28 28-68 28t-68-28l-294-294-294 294q-28 28-68 28t-68-28l-136-136q-28-28-28-68t28-68l294-294-294-294q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 294 294-294q28-28 68-28t68 28l136 136q28 28 28 68t-28 68l-294 294 294 294q28 28 28 68z"></path>
+              </svg>
+            </button>
+          </div>
         </div>
 
+        {/**
+         * CONTENT OF MODAL
+         * **/}
         <div className="p-4 ">
           <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col lg:flex-row">
             <img
@@ -105,6 +131,7 @@ const ArtCard = ({ image, name, attributes, edition, dna}) => {
               src={image}
               alt="blog"
             />
+
             <div className="p-6">
               <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
                 {name}
@@ -113,10 +140,11 @@ const ArtCard = ({ image, name, attributes, edition, dna}) => {
               <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1 pb-2">
                 Rarity
               </h2>
+                
                 {
                   attributes?.map((trait, index) => {
                     const traitValue = rarity[trait.trait_type].filter((item) => item.trait === trait.value )[0].occurrence.slice(-7) 
-                    
+
                     return(
                       <div key={index} className="leading-relaxed mb-3 bold flex items-baseline" >
                         <p className="italic ">{trait.trait_type}</p>: <p className="pl-2 text-sm">{traitValue}</p>
@@ -125,21 +153,23 @@ const ArtCard = ({ image, name, attributes, edition, dna}) => {
                   }) 
                 }
             </div>
+
               {window.location.pathname !== '/wallet' && (connected ? (
                 <button 
                 className="cursor-pointer text-white bg-purple-800 border-0 py-2 px-4 m-auto rounded "
                 onClick={mint}
-              >
-                Buy
-              </button>
-              ) : (
-                <p
-                  className=" cursor-pointer text-white bg-purple-800 border-0 py-2 px-4 m-auto rounded"
-                  onClick={connectWallet}
                 >
-                  Connect Wallet
-                </p>
-              ))}
+                  Buy
+                </button>
+                ) : (
+                  <p
+                    className=" cursor-pointer text-white bg-purple-800 border-0 py-2 px-4 m-auto rounded"
+                    onClick={connectWallet}
+                  >
+                    Connect Wallet
+                  </p>
+                ))
+              }
           </div>
         </div>
       </Modal>

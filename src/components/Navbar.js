@@ -13,13 +13,12 @@ const Navbar = ({ toggle }) => {
   const isMetaMaskConnected = async () => {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const accounts = await provider.listAccounts();
-    console.log(accounts.length);
     if (accounts.length > 0) {
-      console.log("true");
+      console.log("MetaMask connected");
       setConnected(true);
       return true;
     } else {
-      console.log("false");
+      console.log("MetaMask not connected");
       setConnected(false);
       return false;
     }
