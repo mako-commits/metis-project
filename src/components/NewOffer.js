@@ -4,11 +4,7 @@ import OfferForm from "./OfferForm";
 const NewOffer = (props) => {
   const [isEditing, setIsEditing] = useState(false);
   const receivedOfferDataHandler = (enteredOfferData) => {
-    const offerData = {
-      ...enteredOfferData,
-      id: Math.random().toString(),
-    };
-    props.onAddOffer(offerData);
+
     setIsEditing(false);
   };
 
@@ -18,6 +14,7 @@ const NewOffer = (props) => {
   const stopEditingHandler = () => {
     setIsEditing(false);
   };
+  
   return (
     <div className="new-expense mx-auto mt-4 w-auto">
       {!isEditing ? (

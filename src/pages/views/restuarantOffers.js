@@ -1,53 +1,56 @@
-import React, { useState } from "react";
-import DashNav from "../../components/DashNav";
+import React, { useEffect, useState } from "react";
+import AdminDashNav from "../../components/AdminDashNav";
 import NewOffer from "../../components/NewOffer";
 import OfferItem from "../../components/OfferItem";
-const DUMMY_OFFERS = [
-  {
-    id: "OF1",
-    offer: "10% off drinks for 300 CNTM every Wednesday",
-    value: 300,
-  },
-  {
-    id: "OF2",
-    offer: " 15% off on weekends for 500 CNTM",
-    value: 500,
-  },
-  {
-    id: "OF3",
-    offer: "75 CNTM for each referral",
-    value: 75,
-  },
-  {
-    id: "OF4",
-    offer: "Valley parking for 600 CNTM",
-    value: 600,
-  },
-];
+import { db } from "../../config/firebase";
 
 const RestOffer = (props) => {
-  const [offers, setOffers] = useState(DUMMY_OFFERS);
+  const [offers, setOffers] = useState([]);
+  const [ids, setIds] =useState([]);
 
-  const onDeleteOffer = (id) => {
-    const newOffer = [...offers];
-    const index = offers.findIndex((offer) => offer.id === id);
-    newOffer.splice(index, 1);
-    setOffers(newOffer);
-  };
-  const addOfferHandler = (offer) => {
-    setOffers((prevOffers) => {
-      return [offer, ...prevOffers];
+  //get offers from firebase
+  useEffect(() => {
+    db.collection("Businesses")
+      .doc("0xfcCd950FA8cBd332634BcC57809A8a9A0496D4B6")
+      .collection("deals")
+      .onSnapshot((snapshot) => {
+        let dna = snapshot.docs.map((offer) => offer.data());
+        setOffers(dna)
+      });
+  },[])
+
+  //get offer ids
+  useEffect(() => {
+    db.collection("Businesses")
+    .doc("0xfcCd950FA8cBd332634BcC57809A8a9A0496D4B6")
+    .collection("deals")
+    .onSnapshot((images) => {
+      setIds(images.docs.map((image) => image.id));
     });
+  },[])
+
+  const onDeleteOffer = (index) => {    
+    db.collection("Businesses")
+      .doc("0xfcCd950FA8cBd332634BcC57809A8a9A0496D4B6")
+      .collection("deals")
+      .doc(ids[index])
+      .delete()
+      .then(() => {
+        console.log("Document successfully deleted!");
+      }).catch((error) => {
+        console.error("Error removing document: ", error);
+      });
   };
+
   return (
     <>
-      <DashNav />
+      <AdminDashNav />
       <main className="bg-gray-400">
         <div className=" max-w-7xl mx-auto py-6 sm:px-6 lg:px-8 flex flex-col ">
           <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
               <div className="mb-5">
-                <NewOffer onAddOffer={addOfferHandler} />
+                <NewOffer />
               </div>
 
               <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
@@ -75,11 +78,11 @@ const RestOffer = (props) => {
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
-                    {offers.map((item) => (
+                    {offers?.map((item, index) => (
                       <OfferItem
-                        deleteOffer={onDeleteOffer}
-                        key={item.id}
-                        offer={item.offer}
+                        deleteOffer={() => onDeleteOffer(index)}
+                        key={index}
+                        offer={item.info}
                         value={item.value}
                       />
                     ))}
@@ -89,13 +92,6 @@ const RestOffer = (props) => {
             </div>
           </div>
         </div>
-        {/* <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-          <div className="px-4 py-6 sm:px-0">
-            <div className="border-4 border-dashed border-gray-200 rounded-lg h-96 flex items-center justify-center">
-              <h1 className="italic text-xl">Wow....Such empty</h1>
-            </div>
-          </div>
-        </div> */}
       </main>
     </>
   );
