@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { db } from "../config/firebase";
 
 const OfferForm = (props) => {
   const [enteredOffer, setEnteredOffer] = useState("");
@@ -17,6 +18,22 @@ const OfferForm = (props) => {
       offer: enteredOffer,
       value: enteredValue,
     };
+
+    //add offer to firebase
+    db.collection("Businesses")
+    .doc("0xfcCd950FA8cBd332634BcC57809A8a9A0496D4B6")
+    .collection("deals")
+    .add({
+      info: enteredOffer,
+      value: enteredValue
+    })  
+    .then(() => {
+      console.log("Document successfully written!");
+    })
+    .catch((error) => {
+        console.error("Error writing document: ", error);
+    });
+
     console.log(offerData);
     props.onReceivedOfferData(offerData);
 
