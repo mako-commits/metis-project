@@ -13,7 +13,7 @@ const About = (props) => {
           The team
         </h1>
         <p className="text-base leading-8 py-4">
-          The Core Team is comprised of 3 developers.
+          The Core Team is comprised of 3 developers and a business genius.
         </p>
 
         <p className="text-base leading-8 py-4">
@@ -24,13 +24,19 @@ const About = (props) => {
           recognitions.
         </p>
         <p className="text-base leading-8 py-4">
-          Nabil Alamin is co-founder of nft startup; nftinder. He
-          has won multiple international competitions and hackathons including the
+          Nabil Alamin is co-founder of nft startup; nftinder. He has won
+          multiple international competitions and hackathons including the
           recent github actions hackathon.
         </p>
         <p className="text-base leading-8 py-4">
           Mustapha Mubarak is a frontend developer. He loves to code and design
           websites. He's a data analytics and AI programmming enthusiast.
+        </p>
+        <p className="text-base leading-8 py-4">
+          Mbamali Emmanuel is an aspiring world leader with a strong passion for
+          change, A critical thinker with a divine mindset situated towards
+          achieving. He is current;y the haed of strategy at Wingist Network.
+          Also, he got the partnership for us between thrive and also Wingist.
         </p>
       </div>
 
