@@ -17,7 +17,8 @@ const RestOffer = (props) => {
         let dna = snapshot.docs.map((offer) => offer.data());
         setOffers(dna)
       });
-  },[])
+      //eslint-disable-next-line
+  },[window.ethereum.selectedAddress])
 
   //get offer ids
   useEffect(() => {
@@ -27,7 +28,8 @@ const RestOffer = (props) => {
     .onSnapshot((images) => {
       setIds(images.docs.map((image) => image.id));
     });
-  },[])
+      //eslint-disable-next-line
+  },[window.ethereum.selectedAddress])
 
   const onDeleteOffer = (index) => {    
     db.collection("Businesses")

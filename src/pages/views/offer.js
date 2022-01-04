@@ -1,6 +1,9 @@
+import { ethers } from "ethers";
 import React, { useEffect, useState } from "react";
 import DashNav from "../../components/DashNav";
 import { db } from "../../config/firebase";
+import { erc20abi } from "../../constants/erc20abi";
+import { toHex } from "../../constants/walletLogic";
 
 const Offer = () => {
   const [balance, setBalance] = useState(0);
@@ -29,19 +32,41 @@ const Offer = () => {
       });
   },[])
 
+  useEffect( async () => {
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const _metisBalance = await provider.getBalance(`${window.ethereum.selectedAddress}`)
+    // console.log(ethers.utils.formatEther(_metisBalance)) //METIS
+
+    const erc20ContractAddress = '0xA3a31CB196b9edF0Ac5a1A79164ccbaf364896c6'
+    const contract = new ethers.Contract(erc20ContractAddress, erc20abi, provider)
+    const cntmBalance = await contract.balanceOf(`${window.ethereum.selectedAddress}`)
+    console.log(ethers.utils.formatEther(cntmBalance)) //CNTM
+    setBalance(Math.round(ethers.utils.formatEther(cntmBalance))) //CNTM
+
+  },[window.ethereum.selectedAddress])
+
   useEffect(() => {
     const _data = data.concat(data1)
     setDisplayData(_data)
   },[data, data1])
 
+      //eslint-disable-next-line
+  const onRedeem = async(amount, address) => {
+    // event.preventDefault();
+    // alert("Congrats you just redeemed offf");
+    const _amount = toHex(amount)
 
-  const onAddFunds = () => {
-    setBalance(balance + 50);
-  };
+    const transactionParameters = {
+      to: '', // Required except during contract publications.
+      from: window.ethereum.selectedAddress, // must match user's active address.
+      value: _amount, // Only required to send ether to the recipient from the initiating external account.
+    };
+    
+    await window.ethereum.request({
+      method: 'eth_sendTransaction',
+      params: [transactionParameters],
+    }).then((res) => console.log(res)).catch((err) => console.log(err))
 
-  const onRedeem = (event) => {
-    event.preventDefault();
-    alert("Congrats you just redeemed offf");
   };
 
   return (
@@ -52,13 +77,13 @@ const Offer = () => {
           <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
               <div className="mb-5">
-                <h1>Current balance: {balance}</h1>
-                <button
+                <h1>Current balance: {balance} CNTM</h1>
+                {/* <button
                   onClick={onAddFunds}
                   className="lg:mt-2 xl:mt-0 mr-2 flex-shrink-0 inline-flex text-white bg-green-800 border-0 py-2 px-6 focus:outline-none hover:bg-green-400 rounded"
                 >
                   Add funds
-                </button>
+                </button> */}
               </div>
 
               <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
@@ -92,8 +117,8 @@ const Offer = () => {
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
-                    {displayData?.map((person) => (
-                      <tr key={person.email}>
+                    {displayData?.map((person, index) => (
+                      <tr key={index}>
                         <td className="px-6 py-4 whitespace-nowrap">
                           <div className="flex items-center">
                             <div className="flex-shrink-0 h-10 w-10">
@@ -125,9 +150,9 @@ const Offer = () => {
                         </td>
 
                         <td className="px-2 py-4 whitespace-nowrap text-sm text-gray-500">
-                          {balance > person.value ? (
+                          {balance >= person.value ? (
                             <button
-                              onClick={onRedeem}
+                              // onClick={() => onRedeem(person.value, (`${data.filter((item) => item.info === person.info)}` ? "0x8c12d017b5441c735050d13d034e19d459ebd33a" : "0xfccd950fa8cbd332634bcc57809a8a9a0496d4b6") )}
                               className="lg:mt-2 xl:mt-0 mr-2 flex-shrink-0 inline-flex text-white bg-green-800 border-0 py-2 px-6 focus:outline-none hover:bg-green-400 rounded"
                             >
                               Redeem
